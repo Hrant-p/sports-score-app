@@ -1,0 +1,15 @@
+.table-container {
+  position: relative;
+
+  table {
+    tr {
+      td {
+        border: 1px solid midnightblue;
+      }
+      th {
+        border: 1px solid midnightblue;
+
+      }
+    }
+  }
+}

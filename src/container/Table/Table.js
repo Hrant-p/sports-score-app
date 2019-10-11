@@ -7,7 +7,7 @@ class Table extends Component {
     render() {
         return (
             <div className="table-container">
-                <SportsTab/>
+                <SportsTab />
                 <table>
                     <tbody>
 

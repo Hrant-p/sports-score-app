@@ -1,33 +1,15 @@
 import React, {Component} from 'react';
-import './Sportstab.scss';
-import { Link } from "react-router-dom";
+import './SportsTab.scss';
+import TypeButton from "../TypeButton/TypeButton";
 
 class SportsTab extends Component {
     render() {
         return (
             <div className="sports-tab">
-                <ul>
-                    <li>
-                        <Link to="/sports/football">
-                            Football
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/sports/basketball">
-                            Basketball
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/sports/tennis">
-                            Tennis
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/sports/rugby">
-                            Rugby
-                        </Link>
-                    </li>
-                </ul>
+                    <TypeButton label="Football" type='Football' />
+                    <TypeButton label="Basketball" type='' />
+                    <TypeButton label="Tennis" type='' />
+                    <TypeButton label="Rugby" type='' />
             </div>
         );
     }

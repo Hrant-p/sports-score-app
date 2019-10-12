@@ -2,19 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/API/apiFootball/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/API/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/sportData/basketball.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/sportData/rugby.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/sportData/valleyball.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Spinner/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/SportCategory/Valleyball/Valleyball.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/apiFootball/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/apiFootball/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SportsTab/SportsTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SportsTab/SportsTab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/middlewares/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tab/Tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tab/Tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/SportCategory/Tennis/Tennis.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/SportCategory/Valleyball/Valleyball.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/SportCategory/Tennis/Tennis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/sportData/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +58,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\H\Desktop\TASK\sport-app\src\API\sportData" />
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\components" />
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\container\SportCategory" />
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\container\Sports" />
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\container" />
-      <recent name="C:\Users\H\Desktop\TASK\sport-app\src\Components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570793487816</updated>
-      <workItem from="1570793489383" duration="35944000" />
+      <workItem from="1570793489383" duration="45505000" />
     </task>
     <servers />
   </component>

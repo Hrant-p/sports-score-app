@@ -11,15 +11,14 @@ class Table extends Component {
                 <table>
                     <tbody>
 
-                        <Tab label="USA" />
-                        <Tab label="China" />
                         <Tab label="Russia" />
-                        <Tab label="USA" />
-                        <Tab label="Spain"/>
-                        <Tab label="France"/>
-                        <Tab label="Portugal"/>
-                        <Tab label="Brasil"/>
-                        <Tab label="Canada"/>
+                        <Tab label="England"/>
+                        <Tab label="Denmark"/>
+                        <Tab label="Austria" />
+                        <Tab label="Iceland" />
+                        <Tab label="Norway"/>
+                        <Tab label="Poland"/>
+                        <Tab label="Germany"/>
                     </tbody>
                 </table>
             </div>

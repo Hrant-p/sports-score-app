@@ -15,6 +15,7 @@ const Tab = ( { label }) => {
             <td>lorem</td>
             <td>lorem</td>
             <td>lorem</td>
+            <td>lorem</td>
         </tr>
     )
 };

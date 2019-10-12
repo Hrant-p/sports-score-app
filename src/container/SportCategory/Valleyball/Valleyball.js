@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Tennis extends Component {
+class Valleyball extends Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class Tennis extends Component {
     }
 }
 
-export default Tennis;
+export default Valleyball;

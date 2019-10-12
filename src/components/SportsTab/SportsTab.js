@@ -8,8 +8,8 @@ class SportsTab extends Component {
             <div className="sports-tab">
                     <TypeButton label="Football" type='Football' />
                     <TypeButton label="Basketball" type='' />
-                    <TypeButton label="Tennis" type='' />
                     <TypeButton label="Rugby" type='' />
+                    <TypeButton label="Valleyball" type='' />
             </div>
         );
     }

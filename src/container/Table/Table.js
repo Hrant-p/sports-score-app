@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
-import './Table.scss'
 import Tab from "../../components/Tab/Tab";
 import SportsTab from "../../components/SportsTab/SportsTab";
+import {connect} from "react-redux";
+import {
+    errorSelector,
+    infoByCountrySelector,
+    isLoadingSelector
+} from "../../store/selectors";
+import './Table.scss'
 
 class Table extends Component {
     render() {
@@ -10,7 +16,6 @@ class Table extends Component {
                 <SportsTab />
                 <table>
                     <tbody>
-
                         <Tab label="Russia" />
                         <Tab label="England"/>
                         <Tab label="Denmark"/>
@@ -26,5 +31,11 @@ class Table extends Component {
     }
 }
 
-export default Table;
+const mapStateToProps = state => ({
+    infoByCountries: infoByCountrySelector(state),
+    isLoading: isLoadingSelector(state),
+    error: errorSelector(state)
+});
+
+export default connect(mapStateToProps, {})(Table);
 

@@ -1,4 +1,8 @@
-import { SET_LOADING_STATE, sportActionTypes } from "./actionTypes";
+import {
+    SET_LOADING_STATE,
+    SET_SPORT_TYPE,
+    sportActionTypes
+} from "./actionTypes";
 
 export function setLoadingState(isLoading) {
     return {
@@ -14,25 +18,25 @@ export function setErrorsState(error) {
     }
 }
 
-export function getFootballRequest() {
+export function getFootballRequest(history) {
     return {
         type: sportActionTypes.GET_FOOTBALL_REQUEST,
-        payload: {}
+        payload: { history }
     }
 }
 
 export function footballRequestSucceed(data) {
     return {
-        type: SET_LOADING_STATE,
+        type: sportActionTypes.FOOTBALL_REQUEST_SUCCEED,
         payload: { data }
     }
 }
 
 
-export function getBasketballRequest() {
+export function getBasketballRequest(history) {
     return {
         type: sportActionTypes.GET_BASKETBALL_REQUEST,
-        payload: {}
+        payload: { history }
     }
 }
 
@@ -43,25 +47,25 @@ export function basketballRequestSucceed(data) {
     }
 }
 
-export function getValleyballRequest() {
+export function getValleyballRequest(history) {
     return {
-        type: SET_LOADING_STATE,
-        payload: {}
+        type: sportActionTypes.GET_VALLEYBALL_REQUEST,
+        payload: { history }
     }
 
 }
 
 export function valleyballRequestSucced(data) {
     return {
-        type: SET_LOADING_STATE,
+        type: sportActionTypes.VALLEYBALL_REQUEST_SUCCEED,
         payload: { data }
     }
 }
 
-export function getRugbyRequest() {
+export function getRugbyRequest(history) {
     return {
         type: sportActionTypes.GET_RUGBY_REQUEST,
-        payload: {}
+        payload: { history }
     }
 }
 
@@ -69,6 +73,13 @@ export function rugbyRequestSucceed() {
     return {
         type: sportActionTypes.RUGBY_REQUEST_SUCCEED,
         payload: {}
+    }
+}
+
+export function changeSportType(sportType) {
+    return {
+        type: SET_SPORT_TYPE,
+        payload: { sportType }
     }
 }
 

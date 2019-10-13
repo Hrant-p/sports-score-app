@@ -20,7 +20,7 @@ class Table extends Component {
                         <Tab label="England"/>
                         <Tab label="Denmark"/>
                         <Tab label="Austria" />
-                        <Tab label="Iceland" />
+                        <Tab label="Italy" />
                         <Tab label="Norway"/>
                         <Tab label="Poland"/>
                         <Tab label="Germany"/>

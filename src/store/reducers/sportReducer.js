@@ -1,7 +1,7 @@
 import { fromJS } from "immutable";
 import {
     ERROR_STATE,
-    SET_LOADING_STATE,
+    SET_LOADING_STATE, SET_SPORT_TYPE,
     sportActionTypes
 } from "../actions/actionTypes";
 
@@ -12,7 +12,7 @@ const initialState = fromJS({
     error: null
 });
 
-export default (state =initialState, { type, payload }) => {
+export default (state = initialState, { type, payload }) => {
     switch (type) {
         case sportActionTypes.FOOTBALL_REQUEST_SUCCEED:
             return state.set('infoByCountry', fromJS(payload.data));
@@ -22,6 +22,8 @@ export default (state =initialState, { type, payload }) => {
             return state.set('infoByCountry', fromJS(payload.data));
         case sportActionTypes.RUGBY_REQUEST_SUCCEED:
             return state.set('infoByCountry', fromJS(payload.data));
+        case SET_SPORT_TYPE:
+            return state.set('sportType', fromJS(payload.sportType));
         case SET_LOADING_STATE:
             return state.set('isLoading', fromJS(payload.isLoading));
         case ERROR_STATE:

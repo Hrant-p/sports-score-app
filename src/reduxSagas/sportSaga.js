@@ -1,15 +1,17 @@
 import {all, call, put, takeLatest, delay} from 'redux-saga/effects';
 import {
+    basketballRequestSucceed,
     changeSportType,
-    footballRequestSucceed,
+    footballRequestSucceed, rugbyRequestSucceed,
     setErrorsState,
-    setLoadingState
+    setLoadingState, valleyballRequestSucceed
 } from "../store/actions/sportActionCreators";
 import {CLEAR_ERROR_WITH_INTERVAL, sportActionTypes} from "../store/actions/actionTypes";
 import {request} from "../services/requestService";
 import {constructUrl} from "../API/helpers";
 import {countryId, footballApi} from "../API/apiFootball";
 import {leaveUnnecessaryData} from "./sagaHelpers";
+import {jsonData} from "../API/sportData";
 
 
 
@@ -40,8 +42,6 @@ function* multipleCountryRequest(country) {
     }
 }
 
-
-
 function* footballRequest({ payload: { history }}) {
     try {
         yield put(setLoadingState(true));
@@ -59,8 +59,8 @@ function* footballRequest({ payload: { history }}) {
             call(multipleCountryRequest, 'Norway'),
             call(multipleCountryRequest, 'Austria')
         ]);
-        const necessaryData = Array.prototype.concat(rus, rom, aus, den, pol, it, ger, norw);
-       console.log(necessaryData);
+        const necessaryData = yield Array.prototype.concat(rus, rom, aus, den, pol, it, ger, norw);
+        console.log(necessaryData);
        yield history.push('/sports/football');
        yield put(footballRequestSucceed(necessaryData));
        yield put(changeSportType('football'));
@@ -74,38 +74,47 @@ function* footballRequest({ payload: { history }}) {
     }
 }
 
-function* valleyballRequest() {
-    try {
-       yield put(setLoadingState(true));
-       yield put(setLoadingState(false));
-    } catch (e) {
-       yield put(setLoadingState(false));
-       yield put(setErrorsState(e));
-       console.log(e);
-    }
+function* valleyballRequest({payload: {history}}) {
+    yield requestByType('valleyball');
+    yield history.push('/sports/valleyball');
 }
 
-function* basketballRequest() {
-    try {
-       yield put(setLoadingState(true));
-       yield put(setLoadingState(false));
-
-    } catch (e) {
-       yield setLoadingState(false);
-       yield setErrorsState(e);
-       console.log(e);
-    }
+function* basketballRequest({payload: {history}}) {
+    yield requestByType('basketball');
+    yield history.push('/sports/basketball');
 }
 
-function* rugbyRequest() {
-    try {
-       yield put(setLoadingState(true));
-       yield put(setLoadingState(false));
+function* rugbyRequest({payload: {history}}) {
+    yield requestByType('rugby');
+    yield history.push('/sports/rugby');
+}
 
+function* requestByType(sportType) {
+    try {
+        yield put(setLoadingState(true));
+        const countryArr = yield Object.keys(countryId);
+        const matchData = countryArr.map((item, index) => {
+            const slicedData = jsonData[sportType].slice(index, index + 4);
+            const matchInfo = leaveUnnecessaryData(slicedData);
+            return ({
+                [item]: matchInfo
+            });
+        });
+        // const necessaryData = yield Array.prototype.concat(rus, rom, aus, den, pol, it, ger, norw);
+        console.log(matchData);
+        if (sportType === 'basketball') {
+            yield put(basketballRequestSucceed(matchData))
+        } else if (sportType === 'valleyball'){
+            yield put(valleyballRequestSucceed(matchData))
+        } else if (sportType === 'rugby'){
+            yield put(rugbyRequestSucceed(matchData))
+        }
+        yield put(changeSportType(`${sportType}`));
+        yield put(setLoadingState(false));
     } catch (e) {
-       yield setLoadingState(false);
-       yield setErrorsState(e);
-       console.log(e);
+        yield put(setLoadingState(false));
+        yield put(setErrorsState(e));
+        console.log(e);
     }
 }
 

@@ -65,7 +65,7 @@ export function getValleyballRequest(history) {
 
 }
 
-export function valleyballRequestSucced(data) {
+export function valleyballRequestSucceed(data) {
     return {
         type: sportActionTypes.VALLEYBALL_REQUEST_SUCCEED,
         payload: { data }
@@ -79,10 +79,10 @@ export function getRugbyRequest(history) {
     }
 }
 
-export function rugbyRequestSucceed() {
+export function rugbyRequestSucceed(data) {
     return {
         type: sportActionTypes.RUGBY_REQUEST_SUCCEED,
-        payload: {}
+        payload: { data }
     }
 }
 

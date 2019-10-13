@@ -7,19 +7,24 @@ import {
 } from "../../store/actions/sportActionCreators";
 import './TypeButton.scss'
 import * as PropTypes from "prop-types";
-import {sportTypeSelector} from "../../store/selectors";
+import {
+    basketballSelector,
+    footballSelector,
+    rugbySelector,
+    sportTypeSelector,
+    valleyballSelector
+} from "../../store/selectors";
 import {withRouter} from "react-router";
 
 class TypeButton extends Component {
 
-    handleSportTypeChanging = () => {
+    handleSportTypeChanging = history => {
         const {
             label,
             getFootballRequest,
             getBasketballRequest,
             getValleyballRequest,
             getRugbyRequest,
-            history
         } = this.props;
 
         if (label === 'Football') {
@@ -34,14 +39,15 @@ class TypeButton extends Component {
     };
 
     render() {
-        let { label, currentPageSport } = this.props;
-        let className = label.toLowerCase() === currentPageSport.toLowerCase() &&
-        window.location.pathname.includes(label.toLowerCase())
+        let { label, currentPageSport, history } = this.props;
+        const { pathname } = window.location;
+        let className = (label.toLowerCase() === currentPageSport &&
+        this.props[label.toLowerCase()].size ) || pathname.includes(label.toLowerCase())
             ? "touched" : '';
         return (
             <button
                 className={`sport-btn ${className}`}
-                onClick={this.handleSportTypeChanging}
+                onClick={() => this.handleSportTypeChanging(history)}
             >
                 {label}
             </button>
@@ -55,7 +61,11 @@ TypeButton.propTypes = {
 };
 
 const mapStateToProps = state => ({
-    currentPageSport: sportTypeSelector(state)
+    currentPageSport: sportTypeSelector(state),
+    football: footballSelector(state),
+    basketball: basketballSelector(state),
+    valleyball: valleyballSelector(state),
+    rugby: rugbySelector(state)
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(

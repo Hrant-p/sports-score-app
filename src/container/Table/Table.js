@@ -14,8 +14,18 @@ import {getFootballRequest} from "../../store/actions/sportActionCreators";
 import {withRouter} from "react-router";
 import {countryId} from "../../API/apiFootball";
 import {filterListByCountry} from "../../API/helpers";
+import Spinner from "../../components/Spinner";
 
 class Table extends Component {
+
+    drawTableBody = (sportMap) => {
+        const countryNames = Object.keys(countryId);
+        return countryNames.map(country => <Tab
+            label={country}
+            data={filterListByCountry(sportMap, country)}
+            key={countryId[country]}
+        />);
+    };
 
     componentDidMount() {
         const {pathname} = window.location;
@@ -36,22 +46,17 @@ class Table extends Component {
         }
     }
 
+
     render() {
-        const countryNames = Object.keys(countryId);
-        const { football } = this.props;
-        const data = filterListByCountry(football, 'Russia');
-        console.log(data);
+        const {  isLoading, currentPageSport } = this.props;
+        const selectedState = this.props[currentPageSport];
         return (
             <div className="table-container">
                 <AllSportTabs />
+                {isLoading && <Spinner/>}
                 <table>
                     <tbody>
-                    {countryNames.map(country => <Tab
-                        label={country}
-                        data={filterListByCountry(football, country)}
-                        key={countryId[country]}
-                    />)
-                    }
+                    {this.drawTableBody(selectedState)}
                     </tbody>
                 </table>
             </div>

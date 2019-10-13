@@ -5,17 +5,17 @@ import {errorSelector, isLoadingSelector} from "../../store/selectors";
 import Spinner from "../../components/Spinner";
 import Error from "../Error";
 import './Sports.scss';
+import {withRouter} from "react-router";
 
 class Sports extends Component {
     render() {
-        const { isLoading, error } = this.props;
+        const { error } = this.props;
         return (
             <Fragment>
                 <div className="sports-container">
                     <Table/>
                 </div>
                 {error && <Error />}
-                {isLoading && <Spinner/>}
             </Fragment>
         );
     }
@@ -26,5 +26,5 @@ const mapStateToPops = state => ({
     error: errorSelector(state)
 });
 
-export default connect(mapStateToPops, null)(Sports);
+export default connect(mapStateToPops, null)(withRouter(Sports));
 

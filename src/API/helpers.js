@@ -8,5 +8,5 @@ export const constructUrl = (arr, queryObj) => {
 
 export const filterListByCountry = (list, country) => {
     const newData = list.filter(obj => obj.has(country));
-    return newData.map(item => item.getIn([country]));
+    return newData.map(item => item.get(country));
 };

@@ -104,8 +104,12 @@ function* rugbyRequest() {
 }
 
 function* clearErrorWithInterval() {
-        yield delay(7000);
-        yield put(setErrorsState(null))
+        try {
+            yield delay(7000);
+            yield put(setErrorsState(null))
+        } catch (e) {
+            alert(e.message)
+        }
 }
 
 export function* sportSaga() {

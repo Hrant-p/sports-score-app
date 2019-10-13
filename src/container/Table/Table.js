@@ -4,8 +4,8 @@ import SportsTab from "../../components/SportsTab/SportsTab";
 import {connect} from "react-redux";
 import {
     errorSelector,
-    infoByCountrySelector,
-    isLoadingSelector
+    isLoadingSelector,
+    sportTypeSelector
 } from "../../store/selectors";
 import './Table.scss'
 
@@ -32,7 +32,7 @@ class Table extends Component {
 }
 
 const mapStateToProps = state => ({
-    infoByCountries: infoByCountrySelector(state),
+    currentPageSport: sportTypeSelector(state),
     isLoading: isLoadingSelector(state),
     error: errorSelector(state)
 });

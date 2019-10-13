@@ -3,7 +3,7 @@ import Table from "../Table/Table";
 import {connect} from "react-redux";
 import {errorSelector, isLoadingSelector} from "../../store/selectors";
 import Spinner from "../../components/Spinner";
-import Error from "../../components/Error";
+import Error from "../Error";
 import './Sports.scss';
 
 class Sports extends Component {

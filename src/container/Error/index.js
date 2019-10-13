@@ -4,6 +4,8 @@ import {connect} from "react-redux";
 import {errorSelector} from "../../store/selectors";
 import {bindActionCreators} from "redux";
 import {clearErrors} from "../../store/actions/sportActionCreators";
+import PropTypes from 'prop-types';
+
 
 function Error({clearErrors, error}) {
     if (error) clearErrors();
@@ -25,7 +27,10 @@ const DivWithErrorHandling = styled.div`
     text-align: center;
 `;
 
-Error.propTypes = {};
+Error.propTypes = {
+    error: PropTypes.object,
+    clearErrors: PropTypes.func
+};
 
 export default connect(
     state => ({error: errorSelector(state)}),

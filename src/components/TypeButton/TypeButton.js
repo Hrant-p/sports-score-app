@@ -34,9 +34,9 @@ class TypeButton extends Component {
     };
 
     render() {
-        let { label, sportType } = this.props;
-        let className = label === sportType &&
-        window.location.pathname.includes(label.toLocaleString())
+        let { label, currentPageSport } = this.props;
+        let className = label.toLowerCase() === currentPageSport.toLowerCase() &&
+        window.location.pathname.includes(label.toLowerCase())
             ? "touched" : '';
         return (
             <button
@@ -51,11 +51,11 @@ class TypeButton extends Component {
 
 TypeButton.propTypes = {
     label: PropTypes.string,
-    sportType: PropTypes.string
+    currentPageSport: PropTypes.string
 };
 
 const mapStateToProps = state => ({
-    sportType: sportTypeSelector(state)
+    currentPageSport: sportTypeSelector(state)
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(

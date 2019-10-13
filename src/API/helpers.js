@@ -6,3 +6,7 @@ export const constructUrl = (arr, queryObj) => {
     return arr.join("/") + (queryString ? `?${queryString}` : "");
 };
 
+export const filterListByCountry = (list, country) => {
+    const newData = list.filter(obj => obj.has(country));
+    return newData.map(item => item.getIn([country]));
+};

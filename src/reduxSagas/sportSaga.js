@@ -45,15 +45,21 @@ function* multipleCountryRequest(country) {
 function* footballRequest({ payload: { history }}) {
     try {
         yield put(setLoadingState(true));
-       const eng = yield call(multipleCountryRequest, 'England') ;
-       const rus = yield call(multipleCountryRequest,'Russia');
-       const aus = yield call(multipleCountryRequest, 'Austria');
-       const den = yield call(multipleCountryRequest, 'Denmark');
-       const pol = yield call(multipleCountryRequest, 'Poland');
-       const fin = yield call(multipleCountryRequest, 'Italy');
-       const ger = yield call(multipleCountryRequest, 'Germany');
-       const norw = yield call(multipleCountryRequest, 'Norway');
-       const necessaryData = yield [eng, rus, aus, den, pol, fin, ger, norw];
+        const [ rus, rom ] = yield all([
+            call(multipleCountryRequest, 'Russia'),
+            call(multipleCountryRequest, 'Romania'),
+        ]);
+        const [ den, pol, it ] = yield all([
+            call(multipleCountryRequest, 'Denmark'),
+            call(multipleCountryRequest, 'Poland'),
+            call(multipleCountryRequest, 'Italy'),
+        ]);
+        const [ ger, norw, aus ] = yield all([
+            call(multipleCountryRequest, 'Germany'),
+            call(multipleCountryRequest, 'Norway'),
+            call(multipleCountryRequest, 'Austria')
+        ]);
+        const necessaryData = Array.prototype.concat(rus, rom, aus, den, pol, it, ger, norw);
        console.log(necessaryData);
        yield history.push('/sports/football');
        yield put(footballRequestSucceed(necessaryData));

@@ -5,7 +5,7 @@ export const footballApi =  {
 
 export const countryId = {
     Russia: 120,
-    England: 41,
+    Romania: 119,
     Denmark: 34,
     Germany: 51,
     Austria: 8,

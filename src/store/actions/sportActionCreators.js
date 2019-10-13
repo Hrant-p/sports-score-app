@@ -1,4 +1,5 @@
 import {
+    ERROR_STATE,
     SET_LOADING_STATE,
     SET_SPORT_TYPE,
     sportActionTypes
@@ -13,7 +14,7 @@ export function setLoadingState(isLoading) {
 
 export function setErrorsState(error) {
     return {
-        type: SET_LOADING_STATE,
+        type: ERROR_STATE,
         payload: { error }
     }
 }

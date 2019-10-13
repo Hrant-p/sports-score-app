@@ -1,4 +1,4 @@
-import {all, call, put, takeLatest} from 'redux-saga/effects';
+import {all, call, put, takeLatest, delay} from 'redux-saga/effects';
 import {
     changeSportType,
     footballRequestSucceed,
@@ -11,20 +11,27 @@ import {constructUrl} from "../API/helpers";
 import {countryId, footballApi} from "../API/apiFootball";
 
 function* multipleCountryRequest(country) {
-    const {data} = yield call(
-        request,
-        'GET',
-        constructUrl(
-            [footballApi.url],
-            {
-                action: 'get_events',
-                country_id: countryId[country],
-                APIkey: footballApi.key,
-                from: '2019-09-02',
-                to: '2019-09-05'
-            }));
-    return yield {
-        [country]: data.slice(0, 4)
+    try {
+        const {data} = yield call(
+            request,
+            'GET',
+            constructUrl(
+                [footballApi.url],
+                {
+                    action: 'get_events',
+                    country_id: countryId[country],
+                    APIkey: footballApi.key,
+                    from: '2019-09-02',
+                    to: '2019-09-05'
+                }));
+        return yield {
+            [country]: data.slice(0, 4)
+        }
+    } catch (e) {
+        yield put(setLoadingState(false));
+        yield put(setErrorsState(e));
+
+        console.log(e);
     }
 }
 
@@ -32,26 +39,29 @@ function* multipleCountryRequest(country) {
 
 function* footballRequest({ payload: { history }}) {
     try {
-       yield put(setLoadingState(true));
-        const eng = yield call(multipleCountryRequest, 'England') ;
-        const rus = yield call(multipleCountryRequest,'Russia');
-        const aus = yield call(multipleCountryRequest, 'Austria');
-        const den = yield call(multipleCountryRequest, 'Denmark');
-        const pol = yield call(multipleCountryRequest, 'Poland');
-        const fin = yield call(multipleCountryRequest, 'Italy');
-        const ger = yield call(multipleCountryRequest, 'Germany');
-        const norw = yield call(multipleCountryRequest, 'Norway');
-        const necessaryData = yield [eng, rus, aus, den, pol, fin, ger, norw];
-        console.log(necessaryData);
-        yield history.push('/sports/football');
+        yield put(setLoadingState(true));
+       const eng = yield call(multipleCountryRequest, 'England') ;
+       const rus = yield call(multipleCountryRequest,'Russia');
+       const aus = yield call(multipleCountryRequest, 'Austria');
+       const den = yield call(multipleCountryRequest, 'Denmark');
+       const pol = yield call(multipleCountryRequest, 'Poland');
+       const fin = yield call(multipleCountryRequest, 'Italy');
+       const ger = yield call(multipleCountryRequest, 'Germany');
+       const norw = yield call(multipleCountryRequest, 'Norway');
+       const necessaryData = yield [eng, rus, aus, den, pol, fin, ger, norw];
+       console.log(necessaryData);
+       yield history.push('/sports/football');
        yield put(footballRequestSucceed(necessaryData));
        yield put(changeSportType('football'));
        yield put(setLoadingState(false));
 
     } catch (e) {
        yield setLoadingState(false);
-       yield setErrorsState(e);
+       yield put(setErrorsState(e));
        console.log(e);
+    } finally {
+        yield delay(7000);
+        yield put(setErrorsState(null));
     }
 }
 
@@ -64,6 +74,9 @@ function* valleyballRequest() {
        yield setLoadingState(false);
        yield setErrorsState(e);
        console.log(e);
+    } finally {
+        yield delay(7000);
+        yield put(setErrorsState(null));
     }
 }
 
@@ -76,6 +89,9 @@ function* basketballRequest() {
        yield setLoadingState(false);
        yield setErrorsState(e);
        console.log(e);
+    } finally {
+        yield delay(7000);
+        yield put(setErrorsState(null));
     }
 }
 
@@ -88,6 +104,9 @@ function* rugbyRequest() {
        yield setLoadingState(false);
        yield setErrorsState(e);
        console.log(e);
+    } finally {
+        yield delay(7000);
+        yield put(setErrorsState(null));
     }
 }
 

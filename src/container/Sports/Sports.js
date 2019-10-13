@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import './Sports.scss'
 import Table from "../Table/Table";
 import {connect} from "react-redux";
@@ -10,14 +10,16 @@ class Sports extends Component {
     render() {
         const { isLoading, error } = this.props;
         return (
-            <div className="sports-container">
-                {error && <Error error={error} />}
-                {isLoading && <Spinner />}
-                <Table />
-            </div>
+            <Fragment>
+                <div className="sports-container">
+                    <Table/>
+                </div>
+                {error && <Error error={error}/>}
+                {isLoading && <Spinner/>}
+            </Fragment>
         );
     }
-};
+}
 
 const mapStateToPops = state => ({
     isLoading: isLoadingSelector(state),

@@ -5,7 +5,7 @@ import {
     setErrorsState,
     setLoadingState
 } from "../store/actions/sportActionCreators";
-import {sportActionTypes} from "../store/actions/actionTypes";
+import {CLEAR_ERROR_WITH_INTERVAL, sportActionTypes} from "../store/actions/actionTypes";
 import {request} from "../services/requestService";
 import {constructUrl} from "../API/helpers";
 import {countryId, footballApi} from "../API/apiFootball";
@@ -63,10 +63,8 @@ function* footballRequest({ payload: { history }}) {
     } catch (e) {
        yield setLoadingState(false);
        yield put(setErrorsState(e));
+       yield put(footballRequestSucceed([]));
        console.log(e);
-    } finally {
-        yield delay(7000);
-        yield put(setErrorsState(null));
     }
 }
 
@@ -74,14 +72,10 @@ function* valleyballRequest() {
     try {
        yield put(setLoadingState(true));
        yield put(setLoadingState(false));
-
     } catch (e) {
-       yield setLoadingState(false);
-       yield setErrorsState(e);
+       yield put(setLoadingState(false));
+       yield put(setErrorsState(e));
        console.log(e);
-    } finally {
-        yield delay(7000);
-        yield put(setErrorsState(null));
     }
 }
 
@@ -94,9 +88,6 @@ function* basketballRequest() {
        yield setLoadingState(false);
        yield setErrorsState(e);
        console.log(e);
-    } finally {
-        yield delay(7000);
-        yield put(setErrorsState(null));
     }
 }
 
@@ -109,10 +100,12 @@ function* rugbyRequest() {
        yield setLoadingState(false);
        yield setErrorsState(e);
        console.log(e);
-    } finally {
-        yield delay(7000);
-        yield put(setErrorsState(null));
     }
+}
+
+function* clearErrorWithInterval() {
+        yield delay(7000);
+        yield put(setErrorsState(null))
 }
 
 export function* sportSaga() {
@@ -120,7 +113,8 @@ export function* sportSaga() {
         takeLatest(sportActionTypes.GET_FOOTBALL_REQUEST, footballRequest),
         takeLatest(sportActionTypes.GET_BASKETBALL_REQUEST, basketballRequest),
         takeLatest(sportActionTypes.GET_VALLEYBALL_REQUEST, valleyballRequest),
-        takeLatest(sportActionTypes.GET_RUGBY_REQUEST, rugbyRequest)
+        takeLatest(sportActionTypes.GET_RUGBY_REQUEST, rugbyRequest),
+        takeLatest(CLEAR_ERROR_WITH_INTERVAL, clearErrorWithInterval)
     ])
 } 
 

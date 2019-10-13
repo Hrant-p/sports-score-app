@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reduxSagas/sagaHelpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Error/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Error/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570793487816</updated>
-      <workItem from="1570793489383" duration="70479000" />
+      <workItem from="1570793489383" duration="74271000" />
     </task>
     <servers />
   </component>

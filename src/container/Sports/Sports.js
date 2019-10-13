@@ -1,10 +1,10 @@
 import React, {Component, Fragment} from 'react';
-import './Sports.scss'
 import Table from "../Table/Table";
 import {connect} from "react-redux";
 import {errorSelector, isLoadingSelector} from "../../store/selectors";
 import Spinner from "../../components/Spinner";
 import Error from "../../components/Error";
+import './Sports.scss';
 
 class Sports extends Component {
     render() {
@@ -14,7 +14,7 @@ class Sports extends Component {
                 <div className="sports-container">
                     <Table/>
                 </div>
-                {error && <Error error={error}/>}
+                {error && <Error />}
                 {isLoading && <Spinner/>}
             </Fragment>
         );

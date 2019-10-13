@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
+import {connect} from "react-redux";
+import {errorSelector} from "../../store/selectors";
+import {bindActionCreators} from "redux";
+import {clearErrors} from "../../store/actions/sportActionCreators";
 
-function Error({error}) {
+function Error({clearErrors, error}) {
+    if (error) clearErrors();
+
     return (
         <div>
             <DivWithErrorHandling>
@@ -21,4 +27,7 @@ const DivWithErrorHandling = styled.div`
 
 Error.propTypes = {};
 
-export default Error;
+export default connect(
+    state => ({error: errorSelector(state)}),
+    dispatch => bindActionCreators({clearErrors}, dispatch)
+    )(Error);

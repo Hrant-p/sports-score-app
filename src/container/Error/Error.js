@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 import {errorSelector} from "../../store/selectors/sportSelector";
 import PropTypes from 'prop-types';
 
-
 function Error({error}) {
 
     return (
@@ -12,6 +11,9 @@ function Error({error}) {
             <DivWithErrorHandling>
                 <h3>Oops! Something went wrong...</h3>
                 <p>{error.message}</p>
+                <button onClick={() => window.location.reload()}>
+                    Please Refresh Page
+                </button>
             </DivWithErrorHandling>
         </div>
     );

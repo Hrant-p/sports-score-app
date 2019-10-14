@@ -30,4 +30,3 @@ const Tab = ({ label, data }) => {
 };
 
 export default Tab
-

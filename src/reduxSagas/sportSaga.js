@@ -5,7 +5,7 @@ import {
     setLoadingState,
     sportRequestSucceed,
 } from "../store/actions/sportActionCreators";
-import { sportActionTypes} from "../store/actions/actionTypes";
+import {sportActionTypes} from "../store/actions/actionTypes";
 import {request} from "../services/requestService";
 import {constructUrl} from "../API/helpers";
 import {countryId, footballApi} from "../API/apiFootball";
@@ -117,5 +117,4 @@ export function* sportSaga() {
         takeLatest(sportActionTypes.GET_VALLEYBALL_REQUEST, valleyballRequest),
         takeLatest(sportActionTypes.GET_RUGBY_REQUEST, rugbyRequest)
     ])
-} 
-
+}

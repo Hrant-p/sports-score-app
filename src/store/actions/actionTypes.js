@@ -9,4 +9,3 @@ export const sportActionTypes = {
 export const SET_LOADING_STATE = 'SET_LOADING_STATE';
 export const ERROR_STATE = 'ERROR_STATE';
 export const SET_SPORT_TYPE = 'SET_SPORT_TYPE';
-

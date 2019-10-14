@@ -6,7 +6,7 @@ import {
     getFootballRequest, getRugbyRequest, getValleyballRequest
 } from "../../store/actions/sportActionCreators";
 import './TypeButton.scss'
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import {
     basketballSelector,
     footballSelector,
@@ -26,9 +26,6 @@ class TypeButton extends Component {
             getValleyballRequest,
             getRugbyRequest,
             football,
-            // basketball,
-            // valleyball,
-            // rugby
         } = this.props;
 
         if (label === 'Football') {
@@ -89,4 +86,3 @@ export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(withRouter(TypeButton))
-

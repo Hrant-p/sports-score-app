@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import './Card.scss';
+import './DropdownMenu.scss';
+import {withRouter} from "react-router-dom";
 
-class Card extends Component {
+class DropdownMenu extends Component {
     constructor() {
         super();
-
         this.state = {
             showMenu: false,
         };
-
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
     }
@@ -22,7 +21,6 @@ class Card extends Component {
     }
 
     closeMenu(event) {
-
         if (!this.dropdownMenu.contains(event.target)) {
 
             this.setState({ showMenu: false }, () => {
@@ -38,31 +36,34 @@ class Card extends Component {
 
     render() {
         const {showMenu} = this.state;
+        const {menuItems, history} = this.props;
         return (
             <div className='dropdown-menu'>
                 <button
                     className={`btn btn-8 btn-8g ${showMenu ? 'btn-success3d' : ''}`}
                     onClick={this.showMenu}>
-                    dropdown-btn
+                    MENU
                 </button>
-
                 {showMenu ? (
-                            <div
-                                className="menu"
-                                ref={(element) => {
-                                    this.dropdownMenu = element;
-                                }}
-                            >
-                                <button className=''> Home </button>
-                                <button> Sports </button>
-                                <button> Profile </button>
-                                <button> About </button>
-                            </div>
-                        ) : null
+                    <div
+                        className="menu"
+                        ref={(element) => {
+                            this.dropdownMenu = element;
+                        }}
+                    >
+                        {menuItems.map(i => (
+                            <button
+                                key={i.id}
+                                onClick={() => history.push(i.path)}>
+                                {i.name}
+                            </button>)
+                        )}
+                    </div>
+                ) : null
                 }
             </div>
         );
     }
 }
 
-export default Card
+export default withRouter(DropdownMenu)

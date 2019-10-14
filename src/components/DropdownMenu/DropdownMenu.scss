@@ -1,16 +1,21 @@
 .dropdown-menu {
-  top: 5px;
-  position: absolute;
+  //top: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-self: center;
   .dropdown-btn {
-
-
+    width: 100px;
+    height: 400px;
   }
   .menu {
+    width: 100px;
+    height: 400px;
     display: flex;
     flex-direction: column;
   }
 }
-
 
 .btn-8g {
   background: #fff;
@@ -24,22 +29,20 @@
   transform-style: preserve-3d;
 }
 .btn {
+  width: 50px;
+  height: 100%;
   border: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background: none;
+  background-color: rgba(45, 1, 104, 0.81);
+  box-shadow: 1px 1px 3px black;
   cursor: pointer;
-  padding: 25px 80px;
+  //padding: 25px 80px;
   display: inline-block;
   margin: 15px 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: 400;
   outline: none;
   position: relative;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
 *, *:after, *:before {
@@ -47,30 +50,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-button {
-  -webkit-appearance: button;
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: buttontext;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0;
-  text-shadow: none;
-  display: inline-block;
-  text-align: center;
-  align-items: flex-start;
-  cursor: default;
-  background-color: buttonface;
-  box-sizing: border-box;
-  margin: 0;
-  font: 400 13.3333px Arial;
-  padding: 1px 6px;
-  border-width: 2px;
-  border-style: outset;
-  border-color: buttonface;
-  border-image: initial;
-}
+
 .container > section {
   margin: 0 auto;
   padding: 5em 3em;
@@ -82,9 +62,7 @@ button {
   top: 100%;
   background: #e96a6a;
   color: #a33a3a;
-  content: 'Error!';
-  font-weight: 700;
-  //font-family: 'Lato', Calibri, Arial, sans-serif;
+  content: '';
   transform-origin: 0 0;
   transform: rotateX(-90deg);
 }
@@ -97,7 +75,6 @@ button {
   line-height: 70px;
 }
 .btn:before, .icon-heart:after, .icon-star:after, .icon-plus:after, .icon-file:before {
-  font-family: 'icomoon';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -107,14 +84,11 @@ button {
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 .btn-8g:after {
   top: -98%;
-  background: #7aca7c;
+  background: rgba(156, 93, 14, 0.75);
+  box-shadow: 1px 1px 2px black;
   color: #358337;
   content: 'It worked!';
   -webkit-transform-origin: 0% 100%;
@@ -143,12 +117,6 @@ button {
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 
 .btn-8g.btn-success3d {
   background: #aaa;

@@ -33,7 +33,6 @@ export function getBasketballRequest(history) {
     }
 }
 
-
 export function getValleyballRequest(history) {
     return {
         type: sportActionTypes.GET_VALLEYBALL_REQUEST,

@@ -1,38 +1,60 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import './Navbar.scss';
+import DropdownMenu from "../DropdownMenu/DropdownMenu";
 
-// import Card from "./Card";
-// const = [{name: 'path'}].map
+const menuItems = [
+    {id: 0, name: 'Home', path: '/'},
+    {id: 1, name: 'Sports', path: '/sports'},
+    {id: 2, name: 'Profile', path: '/profile'},
+    {id: 3, name: 'About', path: '/about'}
+];
 
-function Navbar() {
-    return (
-        <nav>
-            {/*<Card />*/}
+class Navbar extends Component {
+    constructor() {
+        super();
+        this.state = {
+            dropdown: false
+        };
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.handleDropdownMenu)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize')
+    }
+
+    handleDropdownMenu = () => {
+        console.log(window.innerWidth);
+
+        if (window.innerWidth < 700) {
+            this.setState({dropdown: true})
+        } else {
+            this.setState({dropdown: false})
+        }
+    };
+
+    render() {
+        const {dropdown} =this.state;
+        const items = (
             <ul>
-                <li>
-                    <Link to="/">
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/sports">
-                        Sports
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/profile">
-                        Profile
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/about">
-                        About
-                    </Link>
-                </li>
-            </ul>
-        </nav>
-    );
+                {menuItems.map(item => (
+                    <li key={item.id}>
+                        <Link to={item.path}>
+                            {item.name}
+                        </Link>
+                    </li>
+                ))}
+            </ul>);
+
+        return (
+            <nav>
+                {dropdown ? <DropdownMenu menuItems={menuItems}/> : items}
+            </nav>
+        );
+    }
 }
 
 export default Navbar;

@@ -1,17 +1,27 @@
 .sport-btn {
-  margin: 0;
-  width: 80px;
+  width: 90px;
   height: 100%;
   background-color: aquamarine;
   border-top-right-radius: 100px;
   border-top-left-radius: 20px;
   border: 1px solid rgba(25, 25, 112, 0.29);
   border-left: none;
+  cursor: pointer;
+  font-size: 15px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 17, 0.67);
+  transition: all 0.5s ease;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: midnightblue;
+    text-shadow: none;
+  }
 }
 
 .touched {
   border-style: inset;
   border-bottom: none;
-  color: rgba(0, 0, 0, 0.89);
-  background-color: honeydew;
+  color: honeydew;
+  background-color: #ff8f14;
 }

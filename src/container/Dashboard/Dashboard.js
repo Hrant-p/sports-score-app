@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import './Dashboard.scss'
+import React from 'react';
+import './Dashboard.scss';
 
-class Dashboard extends Component {
-    render() {
-        return (
-            <div className='dashboard'>
-                Hello from Bet Town
-            </div>
-        );
-    }
+function Dashboard() {
+    return (
+        <div className='dashboard'>
+            Hello from Bet Town
+        </div>
+    );
 }
 
 export default Dashboard;

@@ -48,16 +48,17 @@ class Table extends Component {
 
 
     render() {
-        const { currentPageSport } = this.props;
+        const { currentPageSport, error } = this.props;
         const selectedState = this.props[currentPageSport];
         return (
             <div className="table-container">
-                <AllSportTabs />
+                <AllSportTabs/>
+                {!error &&
                 <table>
                     <tbody>
                     {this.drawTableBody(selectedState)}
                     </tbody>
-                </table>
+                </table>}
             </div>
         );
     }

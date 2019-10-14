@@ -13,9 +13,9 @@ class Sports extends Component {
         return (
             <Fragment>
                 {isLoading && <Spinner/>}
+                {error && <Error />}
                 <div className="sports-container">
                     <Table/>
-                {error && <Error />}
                 </div>
             </Fragment>
         );

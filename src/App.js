@@ -17,9 +17,9 @@ function App() {
           <Header />
         <Switch>
           <Route path="/" component={Dashboard} exact />
-          <Route path={['/sports/', "/sports/:type"]} component={Sports} exact />
           <Route path="/about" component={About} exact />
           <Route path="/profile" component={Profile} exact />
+          <Route path={['/sports/', "/sports/:type"]} component={Sports} exact />
           <Route component={NotFound} />
         </Switch>
           <Footer />

@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Profile/Profile.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/ipad_betting.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/online-casino-live-dealer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/sports-betting.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/About.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tab/Tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tab/Tab.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Dashboard/Dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Dashboard/Dashboard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570793487816</updated>
       <workItem from="1570793489383" duration="120719000" />
-      <workItem from="1571065336842" duration="2513000" />
+      <workItem from="1571065336842" duration="5375000" />
     </task>
     <servers />
   </component>

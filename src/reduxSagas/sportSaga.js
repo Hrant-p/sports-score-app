@@ -117,7 +117,7 @@ function* requestByType(sportType) {
 
 function* clearErrorWithInterval() {
         try {
-            yield delay(7000);
+            yield delay(4000);
             yield put(setErrorsState(null))
         } catch (e) {
             alert(e.message)

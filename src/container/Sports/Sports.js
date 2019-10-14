@@ -1,25 +1,23 @@
-import React, {Component, Fragment} from 'react';
+import React, {Fragment} from 'react';
 import Table from "../Table/Table";
 import {connect} from "react-redux";
-import {errorSelector, isLoadingSelector} from "../../store/selectors";
-import Spinner from "../../components/Spinner";
-import Error from "../Error";
+import {errorSelector, isLoadingSelector} from "../../store/selectors/sportSelector";
+import Spinner from "../../components/Spinner/Spinner";
+import Error from "../Error/Error";
 import './Sports.scss';
 import {withRouter} from "react-router";
 
-class Sports extends Component {
-    render() {
-        const { error, isLoading } = this.props;
-        return (
-            <Fragment>
-                {isLoading && <Spinner/>}
-                {error && <Error />}
-                <div className="sports-container">
-                    <Table/>
-                </div>
-            </Fragment>
-        );
-    }
+function Sports(props) {
+    const {error, isLoading} = props;
+    return (
+        <Fragment>
+            {isLoading && <Spinner/>}
+            {error && <Error/>}
+            <div className="sports-container">
+                <Table/>
+            </div>
+        </Fragment>
+    );
 }
 
 const mapStateToPops = state => ({

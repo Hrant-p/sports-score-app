@@ -7,7 +7,7 @@ import {
     errorSelector, footballSelector,
     isLoadingSelector, rugbySelector,
     sportTypeSelector, valleyballSelector
-} from "../../store/selectors";
+} from "../../store/selectors/sportSelector";
 import {bindActionCreators} from "redux";
 import {getFootballRequest} from "../../store/actions/sportActionCreators";
 import {withRouter} from "react-router";
@@ -16,8 +16,7 @@ import {filterListByCountry} from "../../API/helpers";
 import './Table.scss'
 
 class Table extends Component {
-
-    drawTableBody = (sportMap) => {
+    drawTableBody = sportMap => {
         const countryNames = Object.keys(countryId);
         return countryNames.map(country => <Tab
             key={countryId[country]}

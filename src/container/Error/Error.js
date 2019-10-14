@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import {connect} from "react-redux";
-import {errorSelector} from "../../store/selectors";
+import {errorSelector} from "../../store/selectors/sportSelector";
 import {bindActionCreators} from "redux";
-import {clearErrors} from "../../store/actions/sportActionCreators";
 import PropTypes from 'prop-types';
 
 
@@ -33,6 +32,4 @@ Error.propTypes = {
 };
 
 export default connect(
-    state => ({error: errorSelector(state)}),
-    dispatch => bindActionCreators({clearErrors}, dispatch)
-    )(Error);
+    state => ({error: errorSelector(state)}), null)(Error);

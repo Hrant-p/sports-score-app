@@ -1,5 +1,4 @@
 import {
-    CLEAR_ERROR_WITH_INTERVAL,
     ERROR_STATE,
     SET_LOADING_STATE,
     SET_SPORT_TYPE,
@@ -18,14 +17,6 @@ export function setErrorsState(error) {
         type: ERROR_STATE,
         payload: { error }
     }
-}
-
-export function clearErrors() {
-    return {
-        type: CLEAR_ERROR_WITH_INTERVAL,
-        payload: {}
-    }
-
 }
 
 export function getFootballRequest(history) {

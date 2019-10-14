@@ -1,4 +1,4 @@
-import {all, call, put, takeLatest, delay} from 'redux-saga/effects';
+import {all, call, put, takeLatest} from 'redux-saga/effects';
 import {
     basketballRequestSucceed,
     changeSportType,
@@ -6,15 +6,12 @@ import {
     setErrorsState,
     setLoadingState, valleyballRequestSucceed
 } from "../store/actions/sportActionCreators";
-import {CLEAR_ERROR_WITH_INTERVAL, sportActionTypes} from "../store/actions/actionTypes";
+import { sportActionTypes} from "../store/actions/actionTypes";
 import {request} from "../services/requestService";
 import {constructUrl} from "../API/helpers";
 import {countryId, footballApi} from "../API/apiFootball";
 import {leaveUnnecessaryData} from "./sagaHelpers";
 import {jsonData} from "../API/sportData";
-
-
-
 
 function* multipleCountryRequest(country) {
     try {
@@ -38,7 +35,6 @@ function* multipleCountryRequest(country) {
     } catch (e) {
         yield put(setLoadingState(false));
         yield put(setErrorsState(e));
-        console.log(e);
     }
 }
 
@@ -69,7 +65,6 @@ function* footballRequest({ payload: { history }}) {
        yield setLoadingState(false);
        yield put(setErrorsState(e));
        yield put(footballRequestSucceed([]));
-       console.log(e);
     }
 }
 
@@ -93,7 +88,7 @@ function* requestByType(sportType) {
         yield put(setLoadingState(true));
         const countryArr = yield Object.keys(countryId);
         const matchData = countryArr.map((item, index) => {
-            const slicedData = jsonData[sportType].slice(index + 40, index + 44);
+            const slicedData = jsonData[sportType].slice(index + 40, index + 44);// 10 hat
             const matchInfo = leaveUnnecessaryData(slicedData);
             return ({
                 [item]: matchInfo
@@ -111,17 +106,7 @@ function* requestByType(sportType) {
     } catch (e) {
         yield put(setLoadingState(false));
         yield put(setErrorsState(e));
-        console.log(e);
     }
-}
-
-function* clearErrorWithInterval() {
-        try {
-            yield delay(4000);
-            yield put(setErrorsState(null))
-        } catch (e) {
-            alert(e.message)
-        }
 }
 
 export function* sportSaga() {
@@ -129,8 +114,7 @@ export function* sportSaga() {
         takeLatest(sportActionTypes.GET_FOOTBALL_REQUEST, footballRequest),
         takeLatest(sportActionTypes.GET_BASKETBALL_REQUEST, basketballRequest),
         takeLatest(sportActionTypes.GET_VALLEYBALL_REQUEST, valleyballRequest),
-        takeLatest(sportActionTypes.GET_RUGBY_REQUEST, rugbyRequest),
-        takeLatest(CLEAR_ERROR_WITH_INTERVAL, clearErrorWithInterval)
+        takeLatest(sportActionTypes.GET_RUGBY_REQUEST, rugbyRequest)
     ])
 } 
 

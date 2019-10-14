@@ -13,7 +13,7 @@ import {
     rugbySelector,
     sportTypeSelector,
     valleyballSelector
-} from "../../store/selectors";
+} from "../../store/selectors/sportSelector";
 import {withRouter} from "react-router";
 
 class TypeButton extends Component {

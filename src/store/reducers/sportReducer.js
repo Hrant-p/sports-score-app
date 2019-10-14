@@ -20,7 +20,7 @@ export default (state = initialState, { type, payload }) => {
         case sportActionTypes.FOOTBALL_REQUEST_SUCCEED:
             return state.set('football', fromJS(payload.data));
         case sportActionTypes.BASKETBALL_REQUEST_SUCCEED:
-            return state.set('basketball', fromJS(payload.data));
+            return state.set('basketball', fromJS(payload.data));//payload.sportType
         case sportActionTypes.VALLEYBALL_REQUEST_SUCCEED:
             return state.set('valleyball', fromJS(payload.data));
         case sportActionTypes.RUGBY_REQUEST_SUCCEED:
@@ -35,4 +35,3 @@ export default (state = initialState, { type, payload }) => {
             return state;
     }
 }
-

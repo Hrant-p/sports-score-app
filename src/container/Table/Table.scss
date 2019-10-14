@@ -1,17 +1,31 @@
 .table-container {
   position: relative;
-
-  table {
-    tr {
-      td {
-        width: 100px;
-        height: 35px;
-        border: 1px solid midnightblue;
-      }
+  background: linear-gradient(47deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.767927153771665) 100%);
+  tr {
       th {
-        border: 1px solid midnightblue;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: #fdffaf;
+        text-shadow: 0 0 5px #000000;
+        font-size: 13px;
+      }
+      .goalscore {
+        width: 30px;
+        min-width: 30px;
+        height: 35px;
+        background-color: rgba(255, 0, 0, 0.34);
+        text-align: center;
+        font-weight: 400;
+        border-radius: 3px;
+      }
 
+      .match-name {
+        text-align: center;
+        font-size: 13px;
+        grid-area: team;
+        border-radius: 3px;
+        background-color: rgba(21, 112, 21, 0.35);
+        box-shadow: 1px 1px 1px #bcbcbc;
       }
     }
   }
-}

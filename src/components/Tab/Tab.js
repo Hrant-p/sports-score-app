@@ -1,20 +1,27 @@
 import React, {Fragment} from 'react';
+import flags from '../../img/flags'
 
-const Tab = ( { label, data }) => {
-    let recievedData = data.size ? data : [];
-        const teamsAndMatchScores = recievedData.map(item => {
-        return item.map(elem =>  {
-            return (
+const Tab = ({ label, data }) => {
+
+    const teamsAndMatchScores = data.map(item => {
+        return item.map(elem => (
                 <Fragment key={elem.get('match_id')}>
-                    <td>{elem.get('match_hometeam_name')}</td>
-                    <td>{elem.get('goalscorer')}</td>
-                    <td>{elem.get('match_awayteam_name')}</td>
+                    <td className='match-name'>
+                        {elem.get('match_hometeam_name')}
+                    </td>
+                    <td className='goalscore'>
+                        {elem.get('goalscorer')}
+                    </td>
+                    <td className='match-name'>
+                        {elem.get('match_awayteam_name')}
+                    </td>
                 </Fragment>
-            )})
+            )
+        )
     });
     return (
         <tr>
-            <th>
+            <th style={{'background-image': `url(${flags[label]})`}}>
                 {label}
             </th>
             {teamsAndMatchScores}

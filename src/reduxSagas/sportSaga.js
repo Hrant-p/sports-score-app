@@ -60,7 +60,6 @@ function* footballRequest({ payload: { history }}) {
             call(multipleCountryRequest, 'Austria')
         ]);
         const necessaryData = yield Array.prototype.concat(rus, rom, aus, den, pol, it, ger, norw);
-        console.log(necessaryData);
        yield history.push('/sports/football');
        yield put(footballRequestSucceed(necessaryData));
        yield put(changeSportType('football'));
@@ -94,14 +93,12 @@ function* requestByType(sportType) {
         yield put(setLoadingState(true));
         const countryArr = yield Object.keys(countryId);
         const matchData = countryArr.map((item, index) => {
-            const slicedData = jsonData[sportType].slice(index, index + 4);
+            const slicedData = jsonData[sportType].slice(index + 40, index + 44);
             const matchInfo = leaveUnnecessaryData(slicedData);
             return ({
                 [item]: matchInfo
             });
         });
-        // const necessaryData = yield Array.prototype.concat(rus, rom, aus, den, pol, it, ger, norw);
-        console.log(matchData);
         if (sportType === 'basketball') {
             yield put(basketballRequestSucceed(matchData))
         } else if (sportType === 'valleyball'){

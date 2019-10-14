@@ -14,8 +14,8 @@ class Sports extends Component {
             <Fragment>
                 <div className="sports-container">
                     <Table/>
-                </div>
                 {error && <Error />}
+                </div>
             </Fragment>
         );
     }

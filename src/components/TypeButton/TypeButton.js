@@ -25,10 +25,17 @@ class TypeButton extends Component {
             getBasketballRequest,
             getValleyballRequest,
             getRugbyRequest,
+            football,
+            // basketball,
+            // valleyball,
+            // rugby
         } = this.props;
 
         if (label === 'Football') {
-            getFootballRequest(history);
+            football.size > 0 &&
+            window.location.pathname.includes('football') ?
+            history.push('/sports/football') :
+                getFootballRequest(history);
         } else if (label === 'Basketball') {
             getBasketballRequest(history);
         } else if (label === 'Valleyball') {

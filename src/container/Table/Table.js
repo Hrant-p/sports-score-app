@@ -8,13 +8,13 @@ import {
     isLoadingSelector, rugbySelector,
     sportTypeSelector, valleyballSelector
 } from "../../store/selectors";
-import './Table.scss'
 import {bindActionCreators} from "redux";
 import {getFootballRequest} from "../../store/actions/sportActionCreators";
 import {withRouter} from "react-router";
 import {countryId} from "../../API/apiFootball";
 import {filterListByCountry} from "../../API/helpers";
 import Spinner from "../../components/Spinner";
+import './Table.scss'
 
 class Table extends Component {
 

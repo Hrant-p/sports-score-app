@@ -1,20 +1,27 @@
 .table-container {
   position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(47deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.767927153771665) 100%);
   tr {
+    position: relative;
       th {
         background-size: contain;
         background-repeat: no-repeat;
-        color: #fdffaf;
+        background-position: center;
+        color: #ffca51;
         text-shadow: 0 0 5px #000000;
         font-size: 13px;
+
       }
       .goalscore {
-        width: 30px;
+        width: 35px;
         min-width: 30px;
         height: 35px;
         background-color: rgba(255, 0, 0, 0.34);
         text-align: center;
+        text-decoration: underline;
         font-weight: 400;
         border-radius: 3px;
       }

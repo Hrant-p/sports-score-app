@@ -9,9 +9,10 @@ import {withRouter} from "react-router";
 
 class Sports extends Component {
     render() {
-        const { error } = this.props;
+        const { error, isLoading } = this.props;
         return (
             <Fragment>
+                {isLoading && <Spinner/>}
                 <div className="sports-container">
                     <Table/>
                 {error && <Error />}

@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
-import flags from '../../img/flags'
+import flags from '../../img/flags';
 
 const Tab = ({ label, data }) => {
-
-    const teamsAndMatchScores = data.map(item => {
+    const checkedData = data ? data : [];
+    const teamsAndMatchScores = checkedData.map(item => {
         return item.map(elem => (
                 <Fragment key={elem.get('match_id')}>
                     <td className='match-name'>
@@ -21,7 +21,7 @@ const Tab = ({ label, data }) => {
     });
     return (
         <tr>
-            <th style={{'background-image': `url(${flags[label]})`}}>
+            <th style={{backgroundImage: `url(${flags[label]})`}}>
                 {label}
             </th>
             {teamsAndMatchScores}

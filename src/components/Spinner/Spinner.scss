@@ -1,6 +1,7 @@
 .lds-hourglass {
   display: inline-block;
-  position: relative;
+  position: absolute;
+  padding: 0;
   margin-left: 45%;
   width: 64px;
   height: 64px;
@@ -16,7 +17,7 @@
   margin: 6px;
   box-sizing: border-box;
   border: 80px solid black;
-  border-color: #000e27 transparent #280c38 transparent;
+  border-color: #000e27 transparent rgb(56, 2, 97) transparent;
   animation: lds-hourglass 1.2s infinite;
 }
 

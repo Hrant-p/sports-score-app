@@ -7,6 +7,19 @@ export const constructUrl = (arr, queryObj) => {
 };
 
 export const filterListByCountry = (list, country) => {
-    const newData = list.filter(obj => obj.has(country));
-    return newData.map(item => item.get(country));
+    try {
+        if (list && list.size > 0) {
+            const newData = list.filter(obj => {
+                if (!obj) return new Map();
+                return obj.has(country)
+            });
+            return newData.map(item => {
+                if (!item) return [];
+                return item.get(country)
+            });
+        }
+
+    } catch (e) {
+        console.log(e);
+    }
 };

@@ -13,7 +13,6 @@ import {getFootballRequest} from "../../store/actions/sportActionCreators";
 import {withRouter} from "react-router";
 import {countryId} from "../../API/apiFootball";
 import {filterListByCountry} from "../../API/helpers";
-import Spinner from "../../components/Spinner";
 import './Table.scss'
 
 class Table extends Component {
@@ -21,9 +20,10 @@ class Table extends Component {
     drawTableBody = (sportMap) => {
         const countryNames = Object.keys(countryId);
         return countryNames.map(country => <Tab
-            label={country}
-            data={filterListByCountry(sportMap, country)}
             key={countryId[country]}
+            label={country}
+            data={sportMap ? filterListByCountry(sportMap, country) : []}
+            error={this.props.error}
         />);
     };
 
@@ -48,12 +48,11 @@ class Table extends Component {
 
 
     render() {
-        const {  isLoading, currentPageSport } = this.props;
+        const { currentPageSport } = this.props;
         const selectedState = this.props[currentPageSport];
         return (
             <div className="table-container">
                 <AllSportTabs />
-                {isLoading && <Spinner/>}
                 <table>
                     <tbody>
                     {this.drawTableBody(selectedState)}

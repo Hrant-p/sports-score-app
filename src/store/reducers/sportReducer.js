@@ -12,19 +12,13 @@ const initialState = fromJS({
     rugby: [],
     valleyball: [],
     isLoading: false,
-    error: null
+    error: ''
 });
 
 export default (state = initialState, { type, payload }) => {
     switch (type) {
-        case sportActionTypes.FOOTBALL_REQUEST_SUCCEED:
-            return state.set('football', fromJS(payload.data));
-        case sportActionTypes.BASKETBALL_REQUEST_SUCCEED:
-            return state.set('basketball', fromJS(payload.data));//payload.sportType
-        case sportActionTypes.VALLEYBALL_REQUEST_SUCCEED:
-            return state.set('valleyball', fromJS(payload.data));
-        case sportActionTypes.RUGBY_REQUEST_SUCCEED:
-            return state.set('rugby', fromJS(payload.data));
+        case sportActionTypes.SPORT_REQUEST_SUCCEED:
+            return state.set(payload.sportType, fromJS(payload.data));//payload.sportType
         case SET_SPORT_TYPE:
             return state.set('currentPageSport', fromJS(payload.sportType));
         case SET_LOADING_STATE:

@@ -7,4 +7,3 @@ export const rugbySelector = state => sportsSelector(state).get('rugby');
 export const valleyballSelector = state => sportsSelector(state).get('valleyball');
 export const errorSelector = state => sportsSelector(state).get('error');
 export const isLoadingSelector = state => sportsSelector(state).get('isLoading');
-

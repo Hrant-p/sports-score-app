@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PagesWithLazyLoadings/PagesWithLazyLoadings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFound/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFound/NotFound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TypeButton/TypeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TypeButton/TypeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Error/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Error/Error.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Error/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Error/Error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/selectors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/selectors/sportSelector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/selectors/sportSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/selectors/sportSelector.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570793487816</updated>
       <workItem from="1570793489383" duration="120719000" />
-      <workItem from="1571065336842" duration="16022000" />
+      <workItem from="1571065336842" duration="17655000" />
     </task>
     <servers />
   </component>

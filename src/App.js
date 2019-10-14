@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.scss';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import NotFound from "./components/NotFound/NotFound";
 import PagesWithLazyLoadings from "./components/PagesWithLazyLoadings/PagesWithLazyLoadings";
 import Navbar from "./components/Navbar/Navbar";
+import './App.scss';
 
 function App() {
     return (
@@ -22,4 +22,3 @@ function App() {
 }
 
 export default App;
-

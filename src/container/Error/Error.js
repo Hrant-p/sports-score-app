@@ -2,12 +2,10 @@ import React from 'react';
 import styled from "styled-components";
 import {connect} from "react-redux";
 import {errorSelector} from "../../store/selectors/sportSelector";
-import {bindActionCreators} from "redux";
 import PropTypes from 'prop-types';
 
 
-function Error({clearErrors, error}) {
-    if (error) clearErrors();
+function Error({error}) {
 
     return (
         <div>
@@ -28,8 +26,6 @@ const DivWithErrorHandling = styled.div`
 
 Error.propTypes = {
     error: PropTypes.object,
-    clearErrors: PropTypes.func
 };
 
-export default connect(
-    state => ({error: errorSelector(state)}), null)(Error);
+export default connect(state => ({error: errorSelector(state)}), null)(Error);

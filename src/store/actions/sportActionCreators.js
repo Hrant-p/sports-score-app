@@ -26,14 +26,6 @@ export function getFootballRequest(history) {
     }
 }
 
-export function footballRequestSucceed(data) {
-    return {
-        type: sportActionTypes.FOOTBALL_REQUEST_SUCCEED,
-        payload: { data }
-    }
-}
-
-
 export function getBasketballRequest(history) {
     return {
         type: sportActionTypes.GET_BASKETBALL_REQUEST,
@@ -41,12 +33,6 @@ export function getBasketballRequest(history) {
     }
 }
 
-export function basketballRequestSucceed(data) {
-    return {
-        type: sportActionTypes.BASKETBALL_REQUEST_SUCCEED,
-        payload: { data }
-    }
-}
 
 export function getValleyballRequest(history) {
     return {
@@ -56,13 +42,6 @@ export function getValleyballRequest(history) {
 
 }
 
-export function valleyballRequestSucceed(data) {
-    return {
-        type: sportActionTypes.VALLEYBALL_REQUEST_SUCCEED,
-        payload: { data }
-    }
-}
-
 export function getRugbyRequest(history) {
     return {
         type: sportActionTypes.GET_RUGBY_REQUEST,
@@ -70,10 +49,10 @@ export function getRugbyRequest(history) {
     }
 }
 
-export function rugbyRequestSucceed(data) {
+export function sportRequestSucceed(sportType, data) {
     return {
-        type: sportActionTypes.RUGBY_REQUEST_SUCCEED,
-        payload: { data }
+        type: sportActionTypes.SPORT_REQUEST_SUCCEED,
+        payload: { sportType, data }
     }
 }
 
@@ -83,4 +62,3 @@ export function changeSportType(sportType) {
         payload: { sportType }
     }
 }
-

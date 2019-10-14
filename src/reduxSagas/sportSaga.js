@@ -1,10 +1,9 @@
 import {all, call, put, takeLatest} from 'redux-saga/effects';
 import {
-    basketballRequestSucceed,
     changeSportType,
-    footballRequestSucceed, rugbyRequestSucceed,
     setErrorsState,
-    setLoadingState, valleyballRequestSucceed
+    setLoadingState,
+    sportRequestSucceed,
 } from "../store/actions/sportActionCreators";
 import { sportActionTypes} from "../store/actions/actionTypes";
 import {request} from "../services/requestService";
@@ -38,33 +37,41 @@ function* multipleCountryRequest(country) {
     }
 }
 
-function* footballRequest({ payload: { history }}) {
+function* footballRequest({payload: {history}}) {
+
     try {
+        let necessaryData = yield [];
+
         yield put(setLoadingState(true));
-        const [ rus, rom ] = yield all([
+        const [rus, rom] = yield all([
             call(multipleCountryRequest, 'Russia'),
             call(multipleCountryRequest, 'Romania'),
         ]);
-        const [ den, pol, it ] = yield all([
+        necessaryData = yield Array.prototype.concat(rus, rom);
+        yield put(sportRequestSucceed('football', necessaryData));
+        yield history.push('/sports/football');
+        yield put(changeSportType('football'));
+
+        const [den, pol, it] = yield all([
             call(multipleCountryRequest, 'Denmark'),
             call(multipleCountryRequest, 'Poland'),
             call(multipleCountryRequest, 'Italy'),
         ]);
-        const [ ger, norw, aus ] = yield all([
+
+        necessaryData = yield Array.prototype.concat(necessaryData, den, pol, it);
+        yield put(sportRequestSucceed('football', necessaryData));
+
+        const [ger, norw, aus] = yield all([
             call(multipleCountryRequest, 'Germany'),
             call(multipleCountryRequest, 'Norway'),
             call(multipleCountryRequest, 'Austria')
         ]);
-        const necessaryData = yield Array.prototype.concat(rus, rom, aus, den, pol, it, ger, norw);
-       yield history.push('/sports/football');
-       yield put(footballRequestSucceed(necessaryData));
-       yield put(changeSportType('football'));
-       yield put(setLoadingState(false));
-
+        necessaryData = yield Array.prototype.concat(necessaryData, aus, ger, norw);
+        yield put(sportRequestSucceed('football', necessaryData));
+        yield put(setLoadingState(false));
     } catch (e) {
-       yield setLoadingState(false);
-       yield put(setErrorsState(e));
-       yield put(footballRequestSucceed([]));
+        yield setLoadingState(false);
+        yield put(setErrorsState(e));
     }
 }
 
@@ -94,13 +101,7 @@ function* requestByType(sportType) {
                 [item]: matchInfo
             });
         });
-        if (sportType === 'basketball') {
-            yield put(basketballRequestSucceed(matchData))
-        } else if (sportType === 'valleyball'){
-            yield put(valleyballRequestSucceed(matchData))
-        } else if (sportType === 'rugby'){
-            yield put(rugbyRequestSucceed(matchData))
-        }
+        yield put(sportRequestSucceed(sportType, matchData));
         yield put(changeSportType(`${sportType}`));
         yield put(setLoadingState(false));
     } catch (e) {

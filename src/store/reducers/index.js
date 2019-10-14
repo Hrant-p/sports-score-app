@@ -4,4 +4,3 @@ import sportReducer from "./sportReducer";
 export default combineReducers({
     sportReducer
 })
-

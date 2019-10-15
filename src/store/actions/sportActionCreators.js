@@ -38,7 +38,6 @@ export function getValleyballRequest(history) {
         type: sportActionTypes.GET_VALLEYBALL_REQUEST,
         payload: { history }
     }
-
 }
 
 export function getRugbyRequest(history) {

@@ -5,6 +5,7 @@ import {errorSelector, isLoadingSelector} from "../../store/selectors/sportSelec
 import Spinner from "../../components/Spinner/Spinner";
 import Error from "../Error/Error";
 import {withRouter} from "react-router";
+import PropTypes from 'prop-types'
 import './Sports.scss';
 
 function Sports(props) {
@@ -24,5 +25,10 @@ const mapStateToPops = state => ({
     isLoading: isLoadingSelector(state),
     error: errorSelector(state)
 });
+
+Sports.propTypes = {
+    isLoading: PropTypes.bool,
+    error: PropTypes.string
+};
 
 export default connect(mapStateToPops, null)(withRouter(Sports));

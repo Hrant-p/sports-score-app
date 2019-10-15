@@ -5,12 +5,11 @@ import {errorSelector} from "../../store/selectors/sportSelector";
 import PropTypes from 'prop-types';
 
 function Error({error}) {
-
     return (
         <div>
             <DivWithErrorHandling>
                 <h3>Oops! Something went wrong...</h3>
-                <p>{error.message}</p>
+                <p>{error}</p>
                 <button
                     className='sport-btn'
                     onClick={() => window.location.reload()}
@@ -30,7 +29,9 @@ const DivWithErrorHandling = styled.div`
 `;
 
 Error.propTypes = {
-    error: PropTypes.object,
+    error: PropTypes.string,
 };
 
-export default connect(state => ({error: errorSelector(state)}), null)(Error);
+export default connect(
+    state => ({error: errorSelector(state)}),
+    null)(Error);

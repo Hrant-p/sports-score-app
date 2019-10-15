@@ -3,23 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/About/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/About/About.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/About.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DropdownMenu/DropdownMenu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropdownMenu/DropdownMenu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tab/Tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tab/Tab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TypeButton/TypeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TypeButton/TypeButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Error/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Error/Error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Table/Table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reduxSagas/sagaHelpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sagaHelpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/requestService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/requestService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/middlewares/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +104,7 @@
       <updated>1570793487816</updated>
       <workItem from="1570793489383" duration="120719000" />
       <workItem from="1571065336842" duration="26956000" />
-      <workItem from="1571119291057" duration="18414000" />
+      <workItem from="1571119291057" duration="20969000" />
     </task>
     <servers />
   </component>

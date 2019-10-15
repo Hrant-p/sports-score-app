@@ -33,7 +33,7 @@ function* multipleCountryRequest(country) {
         }
     } catch (e) {
         yield put(setLoadingState(false));
-        yield put(setErrorsState(e));
+        yield put(setErrorsState(e.message));
     }
 }
 
@@ -71,7 +71,7 @@ function* footballRequest({payload: {history}}) {
         yield put(setLoadingState(false));
     } catch (e) {
         yield setLoadingState(false);
-        yield put(setErrorsState(e));
+        yield put(setErrorsState(e.message));
     }
 }
 
@@ -106,7 +106,7 @@ function* requestByType(sportType) {
         yield put(setLoadingState(false));
     } catch (e) {
         yield put(setLoadingState(false));
-        yield put(setErrorsState(e));
+        yield put(setErrorsState(e.message));
     }
 }
 

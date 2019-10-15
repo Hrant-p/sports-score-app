@@ -16,4 +16,3 @@ const store = createStore(
 sagaMiddleware.run(middleware);
 
 export default store;
-

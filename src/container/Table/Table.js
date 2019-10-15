@@ -13,6 +13,7 @@ import {getFootballRequest} from "../../store/actions/sportActionCreators";
 import {withRouter} from "react-router";
 import {countryId} from "../../API/apiFootball";
 import {filterListByCountry} from "../../API/helpers";
+import PropTypes from 'prop-types'
 import './Table.scss'
 
 class Table extends Component {
@@ -36,6 +37,7 @@ class Table extends Component {
             getFootballRequestActionCreator,
             history
         } = this.props;
+
         if (pathname.includes('sports') &&
             !football.size &&
             !basketball.size &&
@@ -74,6 +76,17 @@ const mapDispatchToProps = dispatch => bindActionCreators(
     { getFootballRequestActionCreator: getFootballRequest },
     dispatch
 );
+
+Table.propTypes = {
+    currentPageSport: PropTypes.string,
+    football: PropTypes.object,
+    basketball: PropTypes.object,
+    rugby: PropTypes.object,
+    valleyball: PropTypes.object,
+    isLoading: PropTypes.bool,
+    error: PropTypes.string,
+    getFootballRequestActionCreator: PropTypes.func
+};
 
 export default connect(
     mapStateToProps, mapDispatchToProps

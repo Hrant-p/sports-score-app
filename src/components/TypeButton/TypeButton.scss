@@ -1,9 +1,8 @@
 .sport-btn {
   width: 90px;
   height: 100%;
+  padding: 5px;
   background-color: aquamarine;
-  border-top-right-radius: 100px;
-  border-top-left-radius: 20px;
   border: 1px solid rgba(25, 25, 112, 0.29);
   border-left: none;
   cursor: pointer;
@@ -22,6 +21,7 @@
 .touched {
   border-style: inset;
   border-bottom: none;
+  transition: all 0.5s ease;
   color: honeydew;
   background-color: #ff8f14;
 }

@@ -27,8 +27,6 @@ class Navbar extends Component {
     }
 
     handleDropdownMenu = () => {
-        console.log(window.innerWidth);
-
         if (window.innerWidth < 700) {
             this.setState({dropdown: true})
         } else {
@@ -57,4 +55,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default Navbar

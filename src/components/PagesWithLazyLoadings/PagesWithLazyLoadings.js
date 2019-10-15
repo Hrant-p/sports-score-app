@@ -6,7 +6,7 @@ const Sports = lazy(() => import("../../container/Sports/Sports"));
 const Header = lazy(() => import("../Header/Header"));
 const About = lazy(() => import("../About/About"));
 const Profile = lazy(() => import("../Profile/Profile"));
-const Dashboard = lazy(() => import("../../container/Dashboard/Dashboard"));
+const Dashboard = lazy(() => import("../Dashboard/Dashboard"));
 
 function PagesWithLazyLoadings() {
     return (

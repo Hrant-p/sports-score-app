@@ -15,4 +15,3 @@ function AllSportTabs() {
 }
 
 export default AllSportTabs;
-

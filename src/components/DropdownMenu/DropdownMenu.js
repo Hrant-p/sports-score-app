@@ -53,6 +53,8 @@ class DropdownMenu extends Component {
                     >
                         {menuItems.map(i => (
                             <button
+                                className='sport-btn menu-btn'
+                                style={{margin: '5px'}}
                                 key={i.id}
                                 onClick={() => history.push(i.path)}>
                                 {i.name}

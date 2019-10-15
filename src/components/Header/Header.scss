@@ -6,23 +6,28 @@
   justify-content: flex-start;
   background-image: url('../../img/sports1.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 120% ;
-    div {
+  background-size: 100% 120%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.67);
+
+  div {
       width: 120px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin: 0;
+
       p{
-        color: whitesmoke;
         margin: 0;
         text-align: center;
+        text-shadow: 2px 2px 3px rgba(0, 0, 17, 0.67);
+        color: rgba(255, 255, 255, 0.75);
       }
       h3{
-        color: whitesmoke;
         margin: 0;
         text-align: center;
+        text-shadow: 1px 1px 1px rgba(0, 0, 17, 0.67);
+        color: rgba(255, 255, 255, 0.75);
       }
     }
     img {

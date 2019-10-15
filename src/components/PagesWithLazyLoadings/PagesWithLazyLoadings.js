@@ -1,5 +1,5 @@
 import React, {Fragment, lazy, Suspense} from 'react';
-import {Route, Switch} from "react-router";
+import {Route, Switch, Redirect} from "react-router";
 import Spinner from "../Spinner/Spinner";
 
 const Sports = lazy(() => import("../../container/Sports/Sports"));
@@ -17,7 +17,8 @@ function PagesWithLazyLoadings() {
                     <Route path="/" component={Dashboard} exact />
                     <Route path="/about" component={About} exact />
                     <Route path="/profile" component={Profile} exact />
-                    <Route path={['/sports/', "/sports/:type"]} component={Sports} exact />
+                    <Route path='/sports/' component={() => <Redirect to="/sports/football"/>} exact />
+                    <Route path="/sports/:type" component={Sports} exact />
                 </Switch>
             </Suspense>
         </Fragment>

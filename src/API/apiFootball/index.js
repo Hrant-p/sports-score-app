@@ -13,4 +13,3 @@ export const countryId = {
     Norway: 106,
     Poland: 114
 };
-

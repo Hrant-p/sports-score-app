@@ -4,12 +4,20 @@ import AllSportTabs from "../../components/AllSportTabs/AllSportTabs";
 import {connect} from "react-redux";
 import {
     basketballSelector,
-    errorSelector, footballSelector,
-    isLoadingSelector, rugbySelector,
-    sportTypeSelector, valleyballSelector
+    errorSelector,
+    footballSelector,
+    isLoadingSelector,
+    rugbySelector,
+    sportTypeSelector,
+    valleyballSelector
 } from "../../store/selectors/sportSelector";
 import {bindActionCreators} from "redux";
-import {getFootballRequest} from "../../store/actions/sportActionCreators";
+import {
+    getBasketballRequest,
+    getFootballRequest,
+    getRugbyRequest,
+    getValleyballRequest
+} from "../../store/actions/sportActionCreators";
 import {withRouter} from "react-router";
 import {countryId} from "../../API/apiFootball";
 import {filterListByCountry} from "../../API/helpers";
@@ -17,6 +25,28 @@ import PropTypes from 'prop-types'
 import './Table.scss'
 
 class Table extends Component {
+    componentDidMount() {
+        const {pathname} = window.location;
+        const {
+            currentPageSport,
+            getFootballRequest,
+            getBasketballRequest,
+            getValleyballRequest,
+            getRugbyRequest,
+            match : { params: {type}}
+        } = this.props;
+
+            if (type === 'football') {
+                getFootballRequest([]);
+            } else if (type === 'basketball' && currentPageSport === 'football') {
+                getBasketballRequest([]);
+            } else if (type === 'valleyball' && currentPageSport === 'football') {
+                getValleyballRequest([])
+            } else if (type === 'rugby' && currentPageSport === 'football') {
+                getRugbyRequest([]);
+            }
+    };
+
     drawTableBody = sportMap => {
         const countryNames = Object.keys(countryId);
         return countryNames.map(country => <Tab
@@ -26,26 +56,6 @@ class Table extends Component {
             error={this.props.error}
         />);
     };
-
-    componentDidMount() {
-        const {pathname} = window.location;
-        const {
-            football,
-            basketball,
-            valleyball,
-            rugby,
-            getFootballRequestActionCreator,
-            history
-        } = this.props;
-
-        if (pathname.includes('sports') &&
-            !football.size &&
-            !basketball.size &&
-            !valleyball.size &&
-            !rugby.size) {
-            getFootballRequestActionCreator(history)
-        }
-    }
 
     render() {
         const { currentPageSport, error } = this.props;
@@ -73,7 +83,12 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(
-    { getFootballRequestActionCreator: getFootballRequest },
+    {
+        getFootballRequest,
+        getBasketballRequest,
+        getValleyballRequest,
+        getRugbyRequest
+    },
     dispatch
 );
 

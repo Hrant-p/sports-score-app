@@ -4,15 +4,15 @@ import {connect} from "react-redux";
 import {errorSelector, isLoadingSelector} from "../../store/selectors/sportSelector";
 import Spinner from "../../components/Spinner/Spinner";
 import Error from "../Error/Error";
-import './Sports.scss';
 import {withRouter} from "react-router";
+import './Sports.scss';
 
 function Sports(props) {
     const {error, isLoading} = props;
     return (
         <Fragment>
-            {isLoading && <Spinner/>}
             {error && <Error/>}
+            {isLoading && <Spinner/>}
             <div className="sports-container">
                 <Table/>
             </div>
@@ -26,4 +26,3 @@ const mapStateToPops = state => ({
 });
 
 export default connect(mapStateToPops, null)(withRouter(Sports));
-

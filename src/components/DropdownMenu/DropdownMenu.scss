@@ -51,9 +51,6 @@
   position: relative;
   transition: all 0.3s;
 }
-*, *:after, *:before {
-  box-sizing: border-box;
-}
 
 .btn-8g:before {
   top: 100%;

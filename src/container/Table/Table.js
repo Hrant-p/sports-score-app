@@ -45,7 +45,6 @@ class Table extends Component {
         }
     }
 
-
     render() {
         const { currentPageSport, error } = this.props;
         const selectedState = this.props[currentPageSport];
@@ -53,11 +52,9 @@ class Table extends Component {
             <div className="table-container">
                 <AllSportTabs/>
                 {!error &&
-                <table>
-                    <tbody>
+                <div className="tbody">
                     {this.drawTableBody(selectedState)}
-                    </tbody>
-                </table>}
+                </div>}
             </div>
         );
     }
@@ -78,4 +75,6 @@ const mapDispatchToProps = dispatch => bindActionCreators(
     dispatch
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Table));
+export default connect(
+    mapStateToProps, mapDispatchToProps
+)(withRouter(Table));

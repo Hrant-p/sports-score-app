@@ -26,7 +26,7 @@ function* multipleCountryRequest(country) {
                     from: '2019-09-02',
                     to: '2019-09-05'
                 }));
-        const slicedData = yield data.slice(0, 4);
+        const slicedData = yield data.slice(0, 6);
         const matchInfo = yield leaveUnnecessaryData(slicedData);
         return yield {
             [country]: matchInfo
@@ -95,7 +95,7 @@ function* requestByType(sportType) {
         yield put(setLoadingState(true));
         const countryArr = yield Object.keys(countryId);
         const matchData = countryArr.map((item, index) => {
-            const slicedData = jsonData[sportType].slice(index + 40, index + 44);// 10 hat
+            const slicedData = jsonData[sportType].slice(index + 40, index + 46);
             const matchInfo = leaveUnnecessaryData(slicedData);
             return ({
                 [item]: matchInfo

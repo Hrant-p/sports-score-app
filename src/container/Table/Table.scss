@@ -1,42 +1,59 @@
 .table-container {
-  position: relative;
+  height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  padding: 10px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  position: relative;
   background: linear-gradient(47deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.767927153771665) 100%);
-  tbody {
-    min-height: 400px;
-    overflow-y: scroll;
+  .tbody {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr));
+    grid-gap: 15px;
+    min-height: 500px;
+    transition: all 0.3s ease;
+
   }
   tr {
-    position: relative;
-      th {
+    th {
+        padding: 0;
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
-        color: #ffca51;
-        text-shadow: 0 0 5px #000000;
+        background-position: right top;
+        text-align: center;
+        text-decoration: underline;
+        color: white;
+        text-shadow: 1px 1px 5px #000000;
         font-size: 13px;
-
+        &:hover {
+          background-color: #5cbcf6;
+          transition: all 0.3s ease;
+        }
       }
+
       .goalscore {
         width: 35px;
         min-width: 30px;
         height: 35px;
         background-color: rgba(255, 0, 0, 0.34);
         text-align: center;
-        text-decoration: underline;
         font-weight: 400;
         border-radius: 3px;
+        text-shadow: 1px 1px 3px rgba(31, 31, 31, 0.34);
       }
 
       .match-name {
+        padding: 0;
+        width: 100px;
+        height: 40px;
         text-align: center;
         font-size: 13px;
         grid-area: team;
         border-radius: 3px;
         background-color: rgba(21, 112, 21, 0.35);
         box-shadow: 1px 1px 1px #bcbcbc;
+        text-shadow: 1px 1px 4px rgba(63, 63, 63, 0.34);
       }
     }
   }

@@ -4,7 +4,9 @@ import './Dashboard.scss';
 function Dashboard() {
     return (
         <div className='dashboard'>
-            Hello from Bet Town
+            <br/>
+            <br/>
+            <h1>Welcome to the online sport betting site !</h1>
         </div>
     );
 }

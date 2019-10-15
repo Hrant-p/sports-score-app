@@ -11,7 +11,10 @@ function Error({error}) {
             <DivWithErrorHandling>
                 <h3>Oops! Something went wrong...</h3>
                 <p>{error.message}</p>
-                <button onClick={() => window.location.reload()}>
+                <button
+                    className='sport-btn'
+                    onClick={() => window.location.reload()}
+                >
                     Please Refresh Page
                 </button>
             </DivWithErrorHandling>

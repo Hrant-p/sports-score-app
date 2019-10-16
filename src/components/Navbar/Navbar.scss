@@ -9,7 +9,6 @@ nav{
     flex-direction: row;
     align-items: center;
     margin: 0;
-
     li{
       list-style: none;
       margin: 0 20px 0 20px;
@@ -17,13 +16,16 @@ nav{
       justify-content: center;
       align-items: center;
       cursor: pointer;
-
       a{
         height: 100%;
         text-decoration: none;
-        color: rgba(72, 255, 76, 0.87);
+        color: rgba(171, 255, 70, 0.87);
+        &:hover {
+          color: white;
+          transition: all 0.2s ease-in-out;
+          text-shadow: 1px 1px 2px black;
+        }
       }
     }
   }
 }
-

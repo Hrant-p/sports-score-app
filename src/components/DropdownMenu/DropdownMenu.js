@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './DropdownMenu.scss';
+import React, {Component} from 'react';
 import {withRouter} from "react-router-dom";
+import './DropdownMenu.scss';
 
 class DropdownMenu extends Component {
     constructor() {
@@ -22,11 +22,9 @@ class DropdownMenu extends Component {
 
     closeMenu(event) {
         if (!this.dropdownMenu.contains(event.target)) {
-
             this.setState({ showMenu: false }, () => {
                 document.removeEventListener('click', this.closeMenu);
             });
-
         }
     }
 

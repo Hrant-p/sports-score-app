@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/apiFootball/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/apiFootball/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFound/NotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFound/NotFound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PagesWithLazyLoadings/PagesWithLazyLoadings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PagesWithLazyLoadings/PagesWithLazyLoadings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TypeButton/TypeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TypeButton/TypeButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DropdownMenu/DropdownMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropdownMenu/DropdownMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +103,7 @@
       <updated>1570793487816</updated>
       <workItem from="1570793489383" duration="120719000" />
       <workItem from="1571065336842" duration="26956000" />
-      <workItem from="1571119291057" duration="28352000" />
+      <workItem from="1571119291057" duration="33689000" />
     </task>
     <servers />
   </component>

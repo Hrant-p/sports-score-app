@@ -9,7 +9,14 @@ footer {
   margin: 0;
   div {
     text-align: center;
-
+    @media only screen and (max-width: 500px) {
+      p{
+        font-size: 10px;
+      }
+      span{
+        font-size: 8px;
+      }
+    }
     p {
       text-align: center;
       font-size: 12px;

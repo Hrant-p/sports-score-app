@@ -26,25 +26,33 @@ import './Table.scss'
 
 class Table extends Component {
     componentDidMount() {
-        const {pathname} = window.location;
         const {
             currentPageSport,
             getFootballRequest,
             getBasketballRequest,
             getValleyballRequest,
             getRugbyRequest,
+            rugby,
+            basketball,
+            valleyball,
+            history,
             match : { params: {type}}
         } = this.props;
 
+        if (window.location.pathname.includes('/sports/') && !type) {
+            history.push('/sports/football')
+        }
+
             if (type === 'football') {
                 getFootballRequest([]);
-            } else if (type === 'basketball' && currentPageSport === 'football') {
+            } else if (type === 'basketball' && !basketball.size && currentPageSport !== 'basketball') {
                 getBasketballRequest([]);
-            } else if (type === 'valleyball' && currentPageSport === 'football') {
+            } else if (type === 'valleyball' && !valleyball.size && currentPageSport !== 'valleyball') {
                 getValleyballRequest([])
-            } else if (type === 'rugby' && currentPageSport === 'football') {
+            } else if (type === 'rugby' && !rugby.size && currentPageSport !== 'rugby') {
                 getRugbyRequest([]);
             }
+
     };
 
     drawTableBody = sportMap => {
@@ -94,13 +102,15 @@ const mapDispatchToProps = dispatch => bindActionCreators(
 
 Table.propTypes = {
     currentPageSport: PropTypes.string,
-    football: PropTypes.object,
-    basketball: PropTypes.object,
+    getFootballRequest: PropTypes.func,
+    getBasketballRequest: PropTypes.func,
+    getValleyballRequest: PropTypes.func,
+    getRugbyRequest: PropTypes.func,
     rugby: PropTypes.object,
+    basketball: PropTypes.object,
     valleyball: PropTypes.object,
     isLoading: PropTypes.bool,
     error: PropTypes.string,
-    getFootballRequestActionCreator: PropTypes.func
 };
 
 export default connect(

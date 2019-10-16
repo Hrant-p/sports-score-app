@@ -16,20 +16,20 @@
   }
   tr {
     th {
-        padding: 0;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right top;
-        text-align: center;
-        text-decoration: underline;
-        color: white;
-        text-shadow: 1px 1px 5px #000000;
-        font-size: 13px;
-        &:hover {
-          background-color: #5cbcf6;
-          transition: all 0.3s ease;
-        }
+      padding: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right top;
+      text-align: center;
+      text-decoration: underline;
+      color: white;
+      text-shadow: 1px 1px 5px #000000;
+      font-size: 13px;
+      &:hover {
+        background-color: #5cbcf6;
+        transition: all 0.3s ease;
       }
+    }
       .goalscore {
         width: 35px;
         min-width: 30px;

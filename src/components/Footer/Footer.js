@@ -7,7 +7,7 @@ class Footer extends Component {
             <footer>
                 <div>
                     <p>
-                        Online sports betting from Armenian bookmakers - your premier international sportsbook © 2004 -
+                        Online sports betting - your premier international sportsbook © 2004 -
                         2019 Bet Town inc.
                         <br/>
                         <span> Created by Hrant Poghosyan with React.JS </span>

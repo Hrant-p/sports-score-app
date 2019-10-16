@@ -3,7 +3,9 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import {
     getBasketballRequest,
-    getFootballRequest, getRugbyRequest, getValleyballRequest
+    getFootballRequest,
+    getRugbyRequest,
+    getValleyballRequest
 } from "../../store/actions/sportActionCreators";
 import './TypeButton.scss'
 import PropTypes from "prop-types";
@@ -58,7 +60,7 @@ class TypeButton extends Component {
         const { label, currentPageSport, history } = this.props;
         const { pathname } = window.location;
         let className = (label.toLowerCase() === currentPageSport &&
-        this.props[label.toLowerCase()].size ) &&
+        this.props[label.toLowerCase()].size) &&
         pathname.includes(label.toLowerCase())
             ? "touched" : '';
         return (
@@ -74,7 +76,17 @@ class TypeButton extends Component {
 
 TypeButton.propTypes = {
     label: PropTypes.string,
-    currentPageSport: PropTypes.string
+    currentPageSport: PropTypes.string,
+    getFootballRequest: PropTypes.func,
+    getBasketballRequest: PropTypes.func,
+    getValleyballRequest: PropTypes.func,
+    getRugbyRequest: PropTypes.func,
+    football: PropTypes.object,
+    rugby: PropTypes.object,
+    basketball: PropTypes.object,
+    valleyball: PropTypes.object,
+    isLoading: PropTypes.bool,
+    error: PropTypes.string,
 };
 
 const mapStateToProps = state => ({

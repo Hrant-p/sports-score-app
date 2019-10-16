@@ -12,7 +12,6 @@ class Header extends Component {
                 <div>
                     <h3>Bet Town</h3>
                     <p>The best choice for you!</p>
-
                 </div>
             </header>
         );

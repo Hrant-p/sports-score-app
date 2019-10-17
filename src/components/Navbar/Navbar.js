@@ -23,7 +23,7 @@ class Navbar extends Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize')
+        window.removeEventListener('resize', this.handleDropdownMenu)
     }
 
     handleDropdownMenu = () => {

@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DropdownMenu/DropdownMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropdownMenu/DropdownMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DropdownMenu/DropdownMenu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DropdownMenu/DropdownMenu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +65,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -88,6 +89,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -103,7 +105,8 @@
       <updated>1570793487816</updated>
       <workItem from="1570793489383" duration="120719000" />
       <workItem from="1571065336842" duration="26956000" />
-      <workItem from="1571119291057" duration="33689000" />
+      <workItem from="1571119291057" duration="40856000" />
+      <workItem from="1571332675963" duration="2733000" />
     </task>
     <servers />
   </component>

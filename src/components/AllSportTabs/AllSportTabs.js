@@ -1,6 +1,6 @@
 import React from 'react';
 import './AllSportTabs.scss';
-import TypeButton from "../../container/TypeButton/TypeButton";
+import TypeButton from '../../container/TypeButton/TypeButton';
 
 
 function AllSportTabs() {

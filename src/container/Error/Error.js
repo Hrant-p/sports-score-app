@@ -1,24 +1,26 @@
 import React from 'react';
-import styled from "styled-components";
-import {connect} from "react-redux";
-import {errorSelector} from "../../store/selectors/sportSelector";
+import styled from 'styled-components';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { errorSelector } from '../../store/selectors/sportSelector';
 
-function Error({error}) {
-    return (
-        <div>
-            <DivWithErrorHandling>
-                <h3>Oops! Something went wrong...</h3>
-                <p>{error}</p>
-                <button
-                    className='sport-btn'
-                    onClick={() => window.location.reload()}
-                >
+function Error({ error }) {
+  return (
+    <div>
+      <DivWithErrorHandling>
+        <h3>Oops! Something went wrong...</h3>
+        <p>{error}</p>
+          {/* eslint-disable-next-line react/button-has-type */}
+        <button
+          type="button"
+          className="sport-btn"
+          onClick={() => window.location.reload()}
+        >
                     Please Refresh Page
-                </button>
-            </DivWithErrorHandling>
-        </div>
-    );
+        </button>
+      </DivWithErrorHandling>
+    </div>
+  );
 }
 
 const DivWithErrorHandling = styled.div`
@@ -29,9 +31,10 @@ const DivWithErrorHandling = styled.div`
 `;
 
 Error.propTypes = {
-    error: PropTypes.string,
+  error: PropTypes.string,
 };
 
 export default connect(
-    state => ({error: errorSelector(state)}),
-    null)(Error);
+  (state) => ({ error: errorSelector(state) }),
+  null,
+)(Error);

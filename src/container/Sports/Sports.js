@@ -1,11 +1,11 @@
-import React, {Fragment} from 'react';
-import Table from "../Table/Table";
-import {connect} from "react-redux";
-import {errorSelector, isLoadingSelector} from "../../store/selectors/sportSelector";
+import React, { Fragment } from 'react';
+import Table from '../Table/Table';
+import { connect } from 'react-redux';
+import {errorSelector, isLoadingSelector} from '../../store/selectors/sportSelector';
 import Spinner from "../../components/Spinner/Spinner";
 import Error from "../Error/Error";
 import {withRouter} from "react-router";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import './Sports.scss';
 
 function Sports(props) {

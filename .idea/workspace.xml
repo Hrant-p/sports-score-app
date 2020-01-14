@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/apiFootball/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/apiFootball/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/helpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tab/Tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tab/Tab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reduxSagas/sagaHelpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sagaHelpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/requestService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/requestService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/selectors/sportSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/selectors/sportSelector.js" afterDir="false" />
-    </list>
+    <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +131,7 @@
       <workItem from="1571517436507" duration="307000" />
       <workItem from="1571559244348" duration="3150000" />
       <workItem from="1572025803864" duration="2238000" />
-      <workItem from="1578935406491" duration="20844000" />
+      <workItem from="1578935406491" duration="21123000" />
     </task>
     <servers />
   </component>

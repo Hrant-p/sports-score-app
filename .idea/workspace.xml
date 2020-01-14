@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Tab/Tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tab/Tab.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/TypeButton/TypeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/sportActionCreators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +145,7 @@
       <workItem from="1571517436507" duration="307000" />
       <workItem from="1571559244348" duration="3150000" />
       <workItem from="1572025803864" duration="2238000" />
-      <workItem from="1578935406491" duration="32696000" />
+      <workItem from="1578935406491" duration="34306000" />
     </task>
     <servers />
   </component>

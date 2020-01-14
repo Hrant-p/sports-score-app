@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import Table from '../Table/Table';
 import { errorSelector, isLoadingSelector } from '../../store/selectors/sportSelector';
@@ -28,4 +27,4 @@ Sports.propTypes = {
   error: PropTypes.string,
 };
 
-export default connect(mapStateToPops, null)(withRouter(Sports));
+export default connect(mapStateToPops, null)(Sports);

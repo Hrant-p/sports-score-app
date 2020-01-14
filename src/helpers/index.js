@@ -8,7 +8,7 @@ export const constructUrl = (arr, queryObj) => {
 
 export const filterListByCountry = (list, country) => {
   try {
-    if (list && list.size > 0) {
+    if (list && list.size) {
       const newData = list.filter(obj => {
         if (!obj) {
           return new Map();
@@ -21,6 +21,6 @@ export const filterListByCountry = (list, country) => {
       });
     }
   } catch (e) {
-    console.log(e);
+    console.warn(e);
   }
 };

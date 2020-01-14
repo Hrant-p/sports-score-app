@@ -42,7 +42,6 @@ const Table = props => {
   const { pathname } = useLocation();
   const selectedState = props[currentPageSport];
 
-
   useEffect(() => {
     if (pathname.includes('/sports/') && !type) {
       history.push('/sports/football');

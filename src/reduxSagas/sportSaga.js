@@ -8,10 +8,10 @@ import {
   sportRequestSucceed,
 } from '../store/actions/sportActionCreators';
 import { sportActionTypes } from '../store/actions/actionTypes';
-import { request } from '../services/requestService';
+import request from '../services/requestService';
 import { constructUrl } from '../helpers';
 import { countryId, footballApi } from '../API/apiFootball';
-import leaveUnnecessaryData from './sagaHelpers';
+import { leaveUnnecessaryData } from './sagaHelpers';
 import { jsonData } from '../API/sportData';
 
 function* multipleCountryRequest(country) {
@@ -32,14 +32,13 @@ function* multipleCountryRequest(country) {
     );
     const slicedData = yield data.slice(0, 6);
     const matchInfo = yield leaveUnnecessaryData(slicedData);
-    return yield ({
-      [country]: matchInfo,
-    });
+    return { [country]: matchInfo };
   } catch (e) {
     yield put(setLoadingState(false));
     yield put(setErrorsState(e.message));
   }
 }
+
 
 function* requestByType(sportType) {
   try {

@@ -68,7 +68,6 @@ function* footballRequest() {
     ]);
     necessaryData = yield Array.prototype.concat(eng, rom);
     yield put(sportRequestSucceed('football', necessaryData));
-    // yield history.push('/sports/football');
     yield put(changeSportType('football'));
 
     const [den, fr, it] = yield all([
@@ -96,17 +95,14 @@ function* footballRequest() {
 
 function* valleyballRequest() {
   yield requestByType('valleyball');
-  // yield history.push('/sports/valleyball');
 }
 
 function* basketballRequest() {
   yield requestByType('basketball');
-  // yield history.push('/sports/basketball');
 }
 
 function* rugbyRequest() {
   yield requestByType('rugby');
-  // yield history.push('/sports/rugby');
 }
 
 export default function* sportSaga() {

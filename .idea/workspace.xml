@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/sportData/basketball.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/sportData/basketball.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/sportData/rugby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/sportData/rugby.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/sportData/valleyball.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/sportData/valleyball.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AllSportTabs/AllSportTabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NotFound/NotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFound/NotFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Spinner/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Spinner/Spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Error/Error.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Error/Error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +152,7 @@
       <workItem from="1571559244348" duration="3150000" />
       <workItem from="1572025803864" duration="2238000" />
       <workItem from="1578935406491" duration="35568000" />
-      <workItem from="1579034009165" duration="858000" />
+      <workItem from="1579034009165" duration="1407000" />
     </task>
     <servers />
   </component>

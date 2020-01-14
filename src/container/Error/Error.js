@@ -10,7 +10,6 @@ function Error({ error }) {
       <DivWithErrorHandling>
         <h3>Oops! Something went wrong...</h3>
         <p>{error}</p>
-          {/* eslint-disable-next-line react/button-has-type */}
         <button
           type="button"
           className="sport-btn"

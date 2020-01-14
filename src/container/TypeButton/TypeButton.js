@@ -19,7 +19,7 @@ import {
 import {withRouter} from "react-router";
 
 class TypeButton extends Component {
-    handleSportTypeChanging = history => {
+    handleSportTypeChanging = () => {
         const {
             label,
             getFootballRequest,
@@ -30,34 +30,27 @@ class TypeButton extends Component {
             rugby,
             basketball,
             valleyball,
+            history,
             match: {params: {type}}
         } = this.props;
 
         if (label === 'Football') {
-            football.size &&
-            type === 'football' ?
-            history.push('/sports/football') :
-                getFootballRequest(history);
+            getFootballRequest();
         } else if (label === 'Basketball') {
-            basketball.size &&
-            type === 'basketball' ?
-                history.push('/sports/basketball') :
-            getBasketballRequest(history);
+            getBasketballRequest();
         } else if (label === 'Valleyball') {
-            valleyball.size &&
-            type === 'valleyball' ?
-                history.push('/sports/valleyball') :
-           getValleyballRequest(history)
+           getValleyballRequest()
         } else if (label === 'Rugby') {
-            rugby.size &&
-            type === 'rugby' ?
-                history.push('/sports/rugby') :
-            getRugbyRequest(history);
+            getRugbyRequest();
+        }
+
+        if (type !== label.toLowerCase()) {
+            history.push(`/sports/${label.toLowerCase()}`)
         }
     };
 
     render() {
-        const { label, currentPageSport, history } = this.props;
+        const { label, currentPageSport } = this.props;
         const { pathname } = window.location;
         let className = (label.toLowerCase() === currentPageSport &&
         this.props[label.toLowerCase()].size) &&
@@ -66,7 +59,7 @@ class TypeButton extends Component {
         return (
             <button
                 className={`sport-btn ${className}`}
-                onClick={() => this.handleSportTypeChanging(history)}
+                onClick={this.handleSportTypeChanging}
             >
                 {label}
             </button>

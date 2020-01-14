@@ -43,19 +43,21 @@ const Table = props => {
   const selectedState = props[currentPageSport];
 
   useEffect(() => {
-    if (pathname.includes('/sports/') && !type) {
-      history.push('/sports/football');
-    }
+    // if (pathname.includes('/sports/') && !type) {
+    //   history.push('/sports/football');
+    // }
 
     if (type === 'football') {
-      getFootballRequest([]);
+      getFootballRequest();
+      history.push(`/sports/${type}`);
     } else if (type === 'basketball' && !basketball.size && currentPageSport !== 'basketball') {
-      getBasketballRequest([]);
+      getBasketballRequest();
     } else if (type === 'valleyball' && !valleyball.size && currentPageSport !== 'valleyball') {
-      getValleyballRequest([]);
+      getValleyballRequest();
     } else if (type === 'rugby' && !rugby.size && currentPageSport !== 'rugby') {
-      getRugbyRequest([]);
+      getRugbyRequest();
     }
+      history.push(`/sports/${type}`);
   }, [
     currentPageSport,
     getFootballRequest,

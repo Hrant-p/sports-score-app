@@ -58,10 +58,9 @@ function* requestByType(sportType) {
   }
 }
 
-function* footballRequest({ payload: { history } }) {
+function* footballRequest() {
   try {
-    let necessaryData = yield [];
-
+    let necessaryData;
     yield put(setLoadingState(true));
     const [eng, rom] = yield all([
       call(multipleCountryRequest, 'England'),
@@ -69,7 +68,7 @@ function* footballRequest({ payload: { history } }) {
     ]);
     necessaryData = yield Array.prototype.concat(eng, rom);
     yield put(sportRequestSucceed('football', necessaryData));
-    yield history.push('/sports/football');
+    // yield history.push('/sports/football');
     yield put(changeSportType('football'));
 
     const [den, fr, it] = yield all([
@@ -78,7 +77,7 @@ function* footballRequest({ payload: { history } }) {
       call(multipleCountryRequest, 'Italy'),
     ]);
 
-    necessaryData = yield Array.prototype.concat(necessaryData, den, fr, it);
+    necessaryData = yield necessaryData.concat(den, fr, it);
     yield put(sportRequestSucceed('football', necessaryData));
 
     const [ger, norw, aus] = yield all([
@@ -86,7 +85,7 @@ function* footballRequest({ payload: { history } }) {
       call(multipleCountryRequest, 'Norway'),
       call(multipleCountryRequest, 'Austria'),
     ]);
-    necessaryData = yield Array.prototype.concat(necessaryData, aus, ger, norw);
+    necessaryData = yield necessaryData.concat(aus, ger, norw);
     yield put(sportRequestSucceed('football', necessaryData));
     yield put(setLoadingState(false));
   } catch (e) {
@@ -95,19 +94,19 @@ function* footballRequest({ payload: { history } }) {
   }
 }
 
-function* valleyballRequest({ payload: { history } }) {
+function* valleyballRequest() {
   yield requestByType('valleyball');
-  yield history.push('/sports/valleyball');
+  // yield history.push('/sports/valleyball');
 }
 
-function* basketballRequest({ payload: { history } }) {
+function* basketballRequest() {
   yield requestByType('basketball');
-  yield history.push('/sports/basketball');
+  // yield history.push('/sports/basketball');
 }
 
-function* rugbyRequest({ payload: { history } }) {
+function* rugbyRequest() {
   yield requestByType('rugby');
-  yield history.push('/sports/rugby');
+  // yield history.push('/sports/rugby');
 }
 
 export default function* sportSaga() {

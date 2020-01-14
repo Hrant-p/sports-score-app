@@ -1,11 +1,10 @@
 import React from 'react';
-import './Profile.scss'
+import './Profile.scss';
 
 function Profile() {
-    return (
-        <div className="profile">
-        </div>
-    );
+  return (
+    <div className="profile" />
+  );
 }
 
 export default Profile;

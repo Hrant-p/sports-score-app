@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,12 +67,22 @@
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\img" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -101,6 +111,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.build" />
       </list>
@@ -137,7 +148,7 @@
       <workItem from="1571517436507" duration="307000" />
       <workItem from="1571559244348" duration="3150000" />
       <workItem from="1572025803864" duration="2238000" />
-      <workItem from="1578935406491" duration="24016000" />
+      <workItem from="1578935406491" duration="25854000" />
     </task>
     <servers />
   </component>
@@ -165,22 +176,22 @@
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="306" y="43" key="#ESLint/62.0.1304.768@62.0.1304.768" timestamp="1579010291675" />
-    <state width="1283" height="281" key="GridCell.Tab.0.bottom" timestamp="1579011826776">
+    <state width="1283" height="344" key="GridCell.Tab.0.bottom" timestamp="1579017265582">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="281" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1579011826776" />
-    <state width="1283" height="281" key="GridCell.Tab.0.center" timestamp="1579011826776">
+    <state width="1283" height="344" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1579017265582" />
+    <state width="1283" height="344" key="GridCell.Tab.0.center" timestamp="1579017265582">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="281" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1579011826776" />
-    <state width="1283" height="281" key="GridCell.Tab.0.left" timestamp="1579011826776">
+    <state width="1283" height="344" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1579017265582" />
+    <state width="1283" height="344" key="GridCell.Tab.0.left" timestamp="1579017265582">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="281" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1579011826776" />
-    <state width="1283" height="281" key="GridCell.Tab.0.right" timestamp="1579011826776">
+    <state width="1283" height="344" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1579017265582" />
+    <state width="1283" height="344" key="GridCell.Tab.0.right" timestamp="1579017265582">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="281" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1579011826776" />
+    <state width="1283" height="344" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1579017265582" />
     <state x="215" y="27" key="SettingsEditor" timestamp="1579001820848">
       <screen x="62" y="0" width="1304" height="768" />
     </state>

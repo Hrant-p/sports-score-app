@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { useHistory, useParams } from 'react-router';
+import { useHistory, useLocation, useParams } from 'react-router';
 import PropTypes from 'prop-types';
 import { uid } from 'react-uid';
 import Tab from '../../components/Tab/Tab';
@@ -39,9 +39,12 @@ const Table = props => {
   } = props;
   const history = useHistory();
   const { type } = useParams();
+  const { pathname } = useLocation();
+  const selectedState = props[currentPageSport];
+
 
   useEffect(() => {
-    if (window.location.pathname.includes('/sports/') && !type) {
+    if (pathname.includes('/sports/') && !type) {
       history.push('/sports/football');
     }
 
@@ -65,24 +68,23 @@ const Table = props => {
     valleyball,
     history,
     type,
+    pathname,
   ]);
 
-  const countryNames = Object.keys(countryId);
-  const drawTableBody = selectedState => countryNames.map(country => (
-    <Tab
-      key={uid(country)}
-      label={country}
-      data={selectedState ? filterListByCountry(selectedState, country) : []}
-      error={error}
-    />
-  ));
-
-  const selectedState = props[currentPageSport];
   return (
     <div className="table-container">
       <AllSportTabs />
       <div className="tbody">
-        {drawTableBody(selectedState)}
+        {Object
+          .keys(countryId)
+          .map(country => (
+            <Tab
+              key={uid(country)}
+              label={country}
+              data={selectedState ? filterListByCountry(selectedState, country) : []}
+              error={error}
+            />
+          ))}
       </div>
     </div>
   );

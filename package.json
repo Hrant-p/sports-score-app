@@ -2,7 +2,6 @@
   "name": "sport-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://hrant-p.github.io/sport-app",
   "dependencies": {
     "axios": "^0.19.1",
     "immutable": "^4.0.0-rc.12",
@@ -42,6 +41,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "http://hrant-p.github.io/sport-app",
   "browserslist": {
     "production": [
       ">0.2%",

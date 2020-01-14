@@ -20,9 +20,10 @@ import {
 } from "../../store/actions/sportActionCreators";
 import {withRouter} from "react-router";
 import {countryId} from "../../API/apiFootball";
-import {filterListByCountry} from "../../API/helpers";
-import PropTypes from 'prop-types'
+import {filterListByCountry} from "../../helpers";
+import PropTypes from 'prop-types';
 import './Table.scss'
+import {uid} from "react-uid";
 
 class Table extends Component {
     componentDidMount() {
@@ -43,22 +44,22 @@ class Table extends Component {
             history.push('/sports/football')
         }
 
-            if (type === 'football') {
-                getFootballRequest([]);
-            } else if (type === 'basketball' && !basketball.size && currentPageSport !== 'basketball') {
-                getBasketballRequest([]);
-            } else if (type === 'valleyball' && !valleyball.size && currentPageSport !== 'valleyball') {
-                getValleyballRequest([])
-            } else if (type === 'rugby' && !rugby.size && currentPageSport !== 'rugby') {
-                getRugbyRequest([]);
-            }
+        if (type === 'football') {
+            getFootballRequest([]);
+        } else if (type === 'basketball' && !basketball.size && currentPageSport !== 'basketball') {
+            getBasketballRequest([]);
+        } else if (type === 'valleyball' && !valleyball.size && currentPageSport !== 'valleyball') {
+            getValleyballRequest([])
+        } else if (type === 'rugby' && !rugby.size && currentPageSport !== 'rugby') {
+            getRugbyRequest([]);
+        }
 
     };
 
     drawTableBody = sportMap => {
         const countryNames = Object.keys(countryId);
         return countryNames.map(country => <Tab
-            key={countryId[country]}
+            key={uid(country)}
             label={country}
             data={sportMap ? filterListByCountry(sportMap, country) : []}
             error={this.props.error}

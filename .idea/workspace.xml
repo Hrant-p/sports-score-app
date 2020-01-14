@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/apiFootball/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/apiFootball/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tab/Tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tab/Tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reduxSagas/sagaHelpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sagaHelpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reduxSagas/sportSaga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/middlewares/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/middlewares/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/requestService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/requestService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/sportReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/selectors/sportSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/selectors/sportSelector.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,16 +65,16 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hrant\Desktop\sport-app\src\helpers" />
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\container" />
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\components" />
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\components\DropdownMenu" />
       <recent name="C:\Users\H\Desktop\TASK\sport-app\src\img" />
-      <recent name="C:\Users\H\Desktop\TASK\sport-app\src\container\Table" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -138,7 +147,7 @@
       <workItem from="1571517436507" duration="307000" />
       <workItem from="1571559244348" duration="3150000" />
       <workItem from="1572025803864" duration="2238000" />
-      <workItem from="1578935406491" duration="4063000" />
+      <workItem from="1578935406491" duration="20844000" />
     </task>
     <servers />
   </component>
@@ -162,21 +171,33 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1283" height="90" key="GridCell.Tab.0.bottom" timestamp="1578938329453">
+    <state x="306" y="43" key="#ESLint" timestamp="1579010291675">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="90" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1578938329453" />
-    <state width="1283" height="90" key="GridCell.Tab.0.center" timestamp="1578938329453">
+    <state x="306" y="43" key="#ESLint/62.0.1304.768@62.0.1304.768" timestamp="1579010291675" />
+    <state width="1283" height="281" key="GridCell.Tab.0.bottom" timestamp="1579011826776">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="90" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1578938329453" />
-    <state width="1283" height="90" key="GridCell.Tab.0.left" timestamp="1578938329453">
+    <state width="1283" height="281" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1579011826776" />
+    <state width="1283" height="281" key="GridCell.Tab.0.center" timestamp="1579011826776">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="90" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1578938329453" />
-    <state width="1283" height="90" key="GridCell.Tab.0.right" timestamp="1578938329453">
+    <state width="1283" height="281" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1579011826776" />
+    <state width="1283" height="281" key="GridCell.Tab.0.left" timestamp="1579011826776">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1283" height="90" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1578938329453" />
+    <state width="1283" height="281" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1579011826776" />
+    <state width="1283" height="281" key="GridCell.Tab.0.right" timestamp="1579011826776">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state width="1283" height="281" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1579011826776" />
+    <state x="215" y="27" key="SettingsEditor" timestamp="1579001820848">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="215" y="27" key="SettingsEditor/62.0.1304.768@62.0.1304.768" timestamp="1579001820848" />
+    <state x="377" y="89" key="search.everywhere.popup" timestamp="1579001811896">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="377" y="89" key="search.everywhere.popup/62.0.1304.768@62.0.1304.768" timestamp="1579001811896" />
   </component>
 </project>

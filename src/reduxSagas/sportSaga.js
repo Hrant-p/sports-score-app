@@ -9,9 +9,9 @@ import {
 } from '../store/actions/sportActionCreators';
 import { sportActionTypes } from '../store/actions/actionTypes';
 import { request } from '../services/requestService';
-import { constructUrl } from '../API/helpers';
+import { constructUrl } from '../helpers';
 import { countryId, footballApi } from '../API/apiFootball';
-import { leaveUnnecessaryData } from './sagaHelpers';
+import leaveUnnecessaryData from './sagaHelpers';
 import { jsonData } from '../API/sportData';
 
 function* multipleCountryRequest(country) {
@@ -25,8 +25,8 @@ function* multipleCountryRequest(country) {
           action: 'get_events',
           country_id: countryId[country],
           APIkey: footballApi.key,
-          from: '2019-09-02',
-          to: '2019-09-05',
+          from: '2019-11-28',
+          to: '2019-12-05',
         },
       ),
     );
@@ -46,11 +46,9 @@ function* requestByType(sportType) {
     yield put(setLoadingState(true));
     const countryArr = yield Object.keys(countryId);
     const matchData = countryArr.map((item, index) => {
-      const slicedData = jsonData[sportType].slice(index + 40, index + 46);
+      const slicedData = jsonData[sportType].slice(index + 10, index + 16);
       const matchInfo = leaveUnnecessaryData(slicedData);
-      return ({
-        [item]: matchInfo,
-      });
+      return { [item]: matchInfo };
     });
     yield put(sportRequestSucceed(sportType, matchData));
     yield put(changeSportType(`${sportType}`));
@@ -66,22 +64,22 @@ function* footballRequest({ payload: { history } }) {
     let necessaryData = yield [];
 
     yield put(setLoadingState(true));
-    const [rus, rom] = yield all([
-      call(multipleCountryRequest, 'Russia'),
+    const [eng, rom] = yield all([
+      call(multipleCountryRequest, 'England'),
       call(multipleCountryRequest, 'Romania'),
     ]);
-    necessaryData = yield Array.prototype.concat(rus, rom);
+    necessaryData = yield Array.prototype.concat(eng, rom);
     yield put(sportRequestSucceed('football', necessaryData));
     yield history.push('/sports/football');
     yield put(changeSportType('football'));
 
-    const [den, pol, it] = yield all([
+    const [den, fr, it] = yield all([
       call(multipleCountryRequest, 'Denmark'),
-      call(multipleCountryRequest, 'Poland'),
+      call(multipleCountryRequest, 'France'),
       call(multipleCountryRequest, 'Italy'),
     ]);
 
-    necessaryData = yield Array.prototype.concat(necessaryData, den, pol, it);
+    necessaryData = yield Array.prototype.concat(necessaryData, den, fr, it);
     yield put(sportRequestSucceed('football', necessaryData));
 
     const [ger, norw, aus] = yield all([

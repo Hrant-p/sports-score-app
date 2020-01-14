@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="" />
+    <list default="true" id="4567bf7d-0444-473a-a10c-8fb0bf5aa6d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Sports/Sports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Sports/Sports.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/Table/Table.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +137,7 @@
       <workItem from="1571517436507" duration="307000" />
       <workItem from="1571559244348" duration="3150000" />
       <workItem from="1572025803864" duration="2238000" />
-      <workItem from="1578935406491" duration="21123000" />
+      <workItem from="1578935406491" duration="24016000" />
     </task>
     <servers />
   </component>
@@ -179,6 +185,10 @@
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="215" y="27" key="SettingsEditor/62.0.1304.768@62.0.1304.768" timestamp="1579001820848" />
+    <state x="370" y="172" key="run.anything.popup" timestamp="1579012952534">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="370" y="172" key="run.anything.popup/62.0.1304.768@62.0.1304.768" timestamp="1579012952534" />
     <state x="377" y="89" key="search.everywhere.popup" timestamp="1579001811896">
       <screen x="62" y="0" width="1304" height="768" />
     </state>

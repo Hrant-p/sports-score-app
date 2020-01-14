@@ -1,0 +1,2 @@
+(this["webpackJsonpsport-app"]=this["webpackJsonpsport-app"]||[]).push([[8],{121:function(t,p,e){},128:function(t,p,e){"use strict";e.r(p);var n=e(0),s=e.n(n);e(121);p.default=function(){return s.a.createElement("div",{className:"profile"})}}}]);
+//# sourceMappingURL=8.cbdbdad6.chunk.js.map

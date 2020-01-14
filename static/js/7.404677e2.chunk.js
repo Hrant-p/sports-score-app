@@ -1,0 +1,2 @@
+(this["webpackJsonpsport-app"]=this["webpackJsonpsport-app"]||[]).push([[7],{122:function(e,t,n){},129:function(e,t,n){"use strict";n.r(t);var a=n(0),r=n.n(a);n(122);t.default=function(){return r.a.createElement("div",{className:"dashboard"},r.a.createElement("br",null),r.a.createElement("br",null),r.a.createElement("h1",null,"Welcome to the online sport betting site !!!"))}}}]);
+//# sourceMappingURL=7.404677e2.chunk.js.map

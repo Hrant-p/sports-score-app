@@ -2,31 +2,29 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import './DropdownMenu.scss';
 
-const DropdownMenu = props => {
+const DropdownMenu = ({ menuItems }) => {
   const dropdownMenu = useRef(null);
   const [showMenuState, setShowMenuState] = useState(false);
+  const history = useHistory();
 
-  const closeMenu = (event) => {
-    console.log(event.target);
-    if (!dropdownMenu.current.contains(event.target)) {
+  const closeMenu = event => {
+    if (!dropdownMenu.current.contains(event.currentTarget)) {
       setShowMenuState(false);
-      document.removeEventListener('click', closeMenu);
+      document.removeEventListener('click', closeMenu, true);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      document.removeEventListener('click', closeMenu, true);
+    };
+  });
 
   const showMenu = event => {
     event.preventDefault();
     setShowMenuState(true);
-    document.addEventListener('click', closeMenu);
+    document.addEventListener('click', closeMenu, true);
   };
-
-  useEffect(() => () => {
-    document.removeEventListener('click', closeMenu);
-  }, [closeMenu]);
-
-
-  const { menuItems } = props;
-  const history = useHistory();
 
   return (
     <div className="dropdown-menu">
@@ -48,7 +46,10 @@ const DropdownMenu = props => {
               className="sport-btn menu-btn"
               style={{ margin: '5px' }}
               key={i.id}
-              onClick={() => history.push(i.path)}
+              onClick={() => {
+                history.push(i.path);
+                setShowMenuState(false);
+              }}
             >
               {i.name}
             </button>

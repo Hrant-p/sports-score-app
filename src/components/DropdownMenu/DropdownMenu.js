@@ -1,69 +1,62 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import './DropdownMenu.scss';
 
-class DropdownMenu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showMenu: false,
-    };
-    this.showMenu = this.showMenu.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
-  }
+const DropdownMenu = props => {
+  const dropdownMenu = useRef(null);
+  const [showMenuState, setShowMenuState] = useState(false);
 
-  componentWillUnmount() {
-    document.removeEventListener('click', this.closeMenu);
-  }
-
-  closeMenu(event) {
-    if (!this.dropdownMenu.contains(event.target)) {
-      this.setState({ showMenu: false }, () => {
-        document.removeEventListener('click', this.closeMenu);
-      });
+  const closeMenu = (event) => {
+    console.log(event.target);
+    if (!dropdownMenu.current.contains(event.target)) {
+      setShowMenuState(false);
+      document.removeEventListener('click', closeMenu);
     }
-  }
-  showMenu(event) {
+  };
+
+  const showMenu = event => {
     event.preventDefault();
+    setShowMenuState(true);
+    document.addEventListener('click', closeMenu);
+  };
 
-    this.setState({ showMenu: true }, () => {
-      document.addEventListener('click', this.closeMenu);
-    });
-  }
+  useEffect(() => () => {
+    document.removeEventListener('click', closeMenu);
+  }, [closeMenu]);
 
-  render() {
-    const { showMenu } = this.state;
-    const { menuItems, history } = this.props;
-    return (
-      <div className="dropdown-menu">
-        <button
-          className={`btn btn-8 btn-8g ${showMenu ? 'btn-success3d' : ''}`}
-          onClick={this.showMenu}
-        >
+
+  const { menuItems } = props;
+  const history = useHistory();
+
+  return (
+    <div className="dropdown-menu">
+      <button
+        type="button"
+        className={`btn btn-8 btn-8g ${showMenuState ? 'btn-success3d' : ''}`}
+        onClick={showMenu}
+      >
                     MENU
-        </button>
-        {showMenu ? (
-          <div
-            className="menu"
-            ref={(element) => {
-              this.dropdownMenu = element;
-            }}
-          >
-            {menuItems.map((i) => (
-              <button
-                className="sport-btn menu-btn"
-                style={{ margin: '5px' }}
-                key={i.id}
-                onClick={() => history.push(i.path)}
-              >
-                {i.name}
-              </button>
-            ))}
-          </div>
-        ) : null}
-      </div>
-    );
-  }
-}
+      </button>
+      {showMenuState ? (
+        <div
+          className="menu"
+          ref={dropdownMenu}
+        >
+          {menuItems.map((i) => (
+            <button
+              type="button"
+              className="sport-btn menu-btn"
+              style={{ margin: '5px' }}
+              key={i.id}
+              onClick={() => history.push(i.path)}
+            >
+              {i.name}
+            </button>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+};
 
-export default withRouter(DropdownMenu);
+export default DropdownMenu;

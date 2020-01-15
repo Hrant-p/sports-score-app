@@ -1,0 +1,1 @@
+{"version":3,"sources":["About.scss"],"names":[],"mappings":"AAAA,OACE,UAAW,CACX,aAAc,CACd,6DAAmD,CACnD,2BAA4B,CAC5B,0BAA2B","file":"6.1fa15114.chunk.css","sourcesContent":[".about {\r\n  width: 100%;\r\n  height: 61.2vh;\r\n  background-image: url(\"../../img/ipad_betting.png\");\r\n  background-repeat: no-repeat;\r\n  background-size: 100% 100vh;\r\n}\r\n"]}

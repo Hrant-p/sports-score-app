@@ -19,28 +19,26 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', handleDropdownMenu);
+    window.addEventListener('resize', handleDropdownMenu, false);
     handleDropdownMenu();
     return () => {
-      window.removeEventListener('resize', handleDropdownMenu);
+      window.removeEventListener('resize', handleDropdownMenu, false);
     };
   }, []);
 
-  const items = (
-    <ul>
-      {menuItems.map(item => (
-        <li key={item.id}>
-          <Link to={item.path}>
-            {item.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  );
-
   return (
     <nav>
-      {switchDropdown ? <DropdownMenu menuItems={menuItems} /> : items}
+      {switchDropdown ? <DropdownMenu menuItems={menuItems} /> : (
+        <ul>
+          {menuItems.map(item => (
+            <li key={item.id}>
+              <Link to={item.path}>
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };

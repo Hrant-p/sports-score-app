@@ -1,23 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './DropdownMenu.scss';
+import PropTypes from 'prop-types';
 
 const DropdownMenu = ({ menuItems }) => {
   const history = useHistory();
-  const dropdownMenu = useRef(null);
   const [showMenuState, setShowMenuState] = useState(false);
-
-  const closeMenu = event => {
-    if (!dropdownMenu.current.contains(event.currentTarget)) {
-      setShowMenuState(false);
-      document.removeEventListener('click', closeMenu, true);
-    }
-  };
 
   const showMenu = event => {
     event.preventDefault();
-    setShowMenuState(true);
-    document.addEventListener('click', closeMenu, true);
+    setShowMenuState(prevState => !prevState);
   };
 
   return (
@@ -25,30 +17,39 @@ const DropdownMenu = ({ menuItems }) => {
       <button
         type="button"
         className={`btn btn-8 btn-8g ${showMenuState ? 'btn-success3d' : ''}`}
-        onClick={showMenu}
+        onClick={e => showMenu(e)}
       >
                     MENU
       </button>
       {showMenuState ? (
         <div
           className="menu"
-          ref={dropdownMenu}
         >
           {menuItems.map(i => (
-            <Link
+            <button
               className="sport-btn menu-btn"
-              style={{ margin: '2.5px', textAlign: 'center', textDecoration: 'none'}}
+              style={{
+                margin: '2.5px',
+                textAlign: 'center',
+                textDecoration: 'none',
+              }}
               key={i.id}
-              onClick={(e) => closeMenu(e)}
-              to={i.path}
+              onClick={() => {
+                history.push(i.path);
+                setShowMenuState(false);
+              }}
             >
               {i.name}
-            </Link>
+            </button>
           ))}
         </div>
       ) : null}
     </div>
   );
 };
+
+DropdownMenu.propTypes = {
+  menuItems: PropTypes.array.isRequired
+}
 
 export default DropdownMenu;

@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/About/About.js"],"names":["About","className"],"mappings":"oIAAA,kCASeA,UANf,WACE,OACE,yBAAKC,UAAU","file":"static/js/6.43dd0d46.chunk.js","sourcesContent":["import React from 'react';\nimport './About.scss';\n\nfunction About() {\n  return (\n    <div className=\"about\" />\n  );\n}\n\nexport default About;\n"],"sourceRoot":""}

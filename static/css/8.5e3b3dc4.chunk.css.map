@@ -1,0 +1,1 @@
+{"version":3,"sources":["Profile.scss"],"names":[],"mappings":"AAAA,SACE,wFAAoE,CACpE,qBAAsB,CACtB,aAAc","file":"8.5e3b3dc4.chunk.css","sourcesContent":[".profile {\r\n  background: url(\"../../img/online-casino-live-dealer.jpg\") no-repeat;\r\n  background-size: cover;\r\n  height: 61.2vh;\r\n}\r\n"]}

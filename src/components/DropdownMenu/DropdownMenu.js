@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import './DropdownMenu.scss';
 
 const DropdownMenu = ({ menuItems }) => {
+  const history = useHistory();
   const dropdownMenu = useRef(null);
   const [showMenuState, setShowMenuState] = useState(false);
-  const history = useHistory();
 
   const closeMenu = event => {
     if (!dropdownMenu.current.contains(event.currentTarget)) {
@@ -13,12 +13,6 @@ const DropdownMenu = ({ menuItems }) => {
       document.removeEventListener('click', closeMenu, true);
     }
   };
-
-  useEffect(() => {
-    return () => {
-      document.removeEventListener('click', closeMenu, true);
-    };
-  });
 
   const showMenu = event => {
     event.preventDefault();
@@ -40,19 +34,16 @@ const DropdownMenu = ({ menuItems }) => {
           className="menu"
           ref={dropdownMenu}
         >
-          {menuItems.map((i) => (
-            <button
-              type="button"
+          {menuItems.map(i => (
+            <Link
               className="sport-btn menu-btn"
-              style={{ margin: '5px' }}
+              style={{ margin: '2.5px', textAlign: 'center', textDecoration: 'none'}}
               key={i.id}
-              onClick={() => {
-                history.push(i.path);
-                setShowMenuState(false);
-              }}
+              onClick={(e) => closeMenu(e)}
+              to={i.path}
             >
               {i.name}
-            </button>
+            </Link>
           ))}
         </div>
       ) : null}

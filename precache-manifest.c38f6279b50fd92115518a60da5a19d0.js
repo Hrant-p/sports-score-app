@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "217dafa0e318d91415e09b9409292fe6",
+    "revision": "aaf17c66b679b16a0a7fb12a0335b055",
     "url": "/sports-score-app/index.html"
   },
   {
-    "revision": "b4b3f255355ff5c43c76",
+    "revision": "0d33aa911013b298f0b8",
     "url": "/sports-score-app/static/css/3.6bc0402b.chunk.css"
   },
   {
@@ -24,16 +24,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sports-score-app/static/css/8.bbe6ffad.chunk.css"
   },
   {
-    "revision": "5e9b78fa8ec915fff0db",
+    "revision": "02324bde2b159790bb27",
     "url": "/sports-score-app/static/css/main.50ab5506.chunk.css"
   },
   {
-    "revision": "e427fff162b5e164fbb5",
-    "url": "/sports-score-app/static/js/2.c39f2416.chunk.js"
+    "revision": "0c78f922f74ce3cee09a",
+    "url": "/sports-score-app/static/js/2.79c00e83.chunk.js"
   },
   {
-    "revision": "b4b3f255355ff5c43c76",
-    "url": "/sports-score-app/static/js/3.8b1653d3.chunk.js"
+    "revision": "0d33aa911013b298f0b8",
+    "url": "/sports-score-app/static/js/3.50e9f591.chunk.js"
   },
   {
     "revision": "cac30bab7185e9244a1b",
@@ -56,12 +56,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sports-score-app/static/js/8.8b3d6a8e.chunk.js"
   },
   {
-    "revision": "5e9b78fa8ec915fff0db",
-    "url": "/sports-score-app/static/js/main.37b6abf3.chunk.js"
+    "revision": "02324bde2b159790bb27",
+    "url": "/sports-score-app/static/js/main.4cddc482.chunk.js"
   },
   {
-    "revision": "1bde0a017f316f5f2c45",
-    "url": "/sports-score-app/static/js/runtime-main.083d36af.js"
+    "revision": "44fb195dc263855b0b00",
+    "url": "/sports-score-app/static/js/runtime-main.ae4df1eb.js"
   },
   {
     "revision": "311bba837e8f2b1664c8e74c26154d0c",

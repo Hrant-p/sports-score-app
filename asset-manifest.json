@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sports-score-app/static/css/main.50ab5506.chunk.css",
-    "main.js": "/sports-score-app/static/js/main.37b6abf3.chunk.js",
-    "main.js.map": "/sports-score-app/static/js/main.37b6abf3.chunk.js.map",
-    "runtime-main.js": "/sports-score-app/static/js/runtime-main.083d36af.js",
-    "runtime-main.js.map": "/sports-score-app/static/js/runtime-main.083d36af.js.map",
-    "static/js/2.c39f2416.chunk.js": "/sports-score-app/static/js/2.c39f2416.chunk.js",
-    "static/js/2.c39f2416.chunk.js.map": "/sports-score-app/static/js/2.c39f2416.chunk.js.map",
+    "main.js": "/sports-score-app/static/js/main.4cddc482.chunk.js",
+    "main.js.map": "/sports-score-app/static/js/main.4cddc482.chunk.js.map",
+    "runtime-main.js": "/sports-score-app/static/js/runtime-main.ae4df1eb.js",
+    "runtime-main.js.map": "/sports-score-app/static/js/runtime-main.ae4df1eb.js.map",
+    "static/js/2.79c00e83.chunk.js": "/sports-score-app/static/js/2.79c00e83.chunk.js",
+    "static/js/2.79c00e83.chunk.js.map": "/sports-score-app/static/js/2.79c00e83.chunk.js.map",
     "static/css/3.6bc0402b.chunk.css": "/sports-score-app/static/css/3.6bc0402b.chunk.css",
-    "static/js/3.8b1653d3.chunk.js": "/sports-score-app/static/js/3.8b1653d3.chunk.js",
-    "static/js/3.8b1653d3.chunk.js.map": "/sports-score-app/static/js/3.8b1653d3.chunk.js.map",
+    "static/js/3.50e9f591.chunk.js": "/sports-score-app/static/js/3.50e9f591.chunk.js",
+    "static/js/3.50e9f591.chunk.js.map": "/sports-score-app/static/js/3.50e9f591.chunk.js.map",
     "static/js/4.b7320a00.chunk.js": "/sports-score-app/static/js/4.b7320a00.chunk.js",
     "static/js/4.b7320a00.chunk.js.map": "/sports-score-app/static/js/4.b7320a00.chunk.js.map",
     "static/css/5.93891e58.chunk.css": "/sports-score-app/static/css/5.93891e58.chunk.css",
@@ -25,7 +25,7 @@
     "static/js/8.8b3d6a8e.chunk.js": "/sports-score-app/static/js/8.8b3d6a8e.chunk.js",
     "static/js/8.8b3d6a8e.chunk.js.map": "/sports-score-app/static/js/8.8b3d6a8e.chunk.js.map",
     "index.html": "/sports-score-app/index.html",
-    "precache-manifest.7be5d9c8b3ffb6c4750cd407c6734ed6.js": "/sports-score-app/precache-manifest.7be5d9c8b3ffb6c4750cd407c6734ed6.js",
+    "precache-manifest.c38f6279b50fd92115518a60da5a19d0.js": "/sports-score-app/precache-manifest.c38f6279b50fd92115518a60da5a19d0.js",
     "service-worker.js": "/sports-score-app/service-worker.js",
     "static/css/3.6bc0402b.chunk.css.map": "/sports-score-app/static/css/3.6bc0402b.chunk.css.map",
     "static/css/5.93891e58.chunk.css.map": "/sports-score-app/static/css/5.93891e58.chunk.css.map",
@@ -40,9 +40,9 @@
     "static/media/Header.scss": "/sports-score-app/static/media/sports1.53db1115.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.083d36af.js",
-    "static/js/2.c39f2416.chunk.js",
+    "static/js/runtime-main.ae4df1eb.js",
+    "static/js/2.79c00e83.chunk.js",
     "static/css/main.50ab5506.chunk.css",
-    "static/js/main.37b6abf3.chunk.js"
+    "static/js/main.4cddc482.chunk.js"
   ]
 }

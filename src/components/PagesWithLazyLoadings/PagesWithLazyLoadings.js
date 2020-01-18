@@ -8,7 +8,7 @@ const About = lazy(() => import("../About/About"));
 const Profile = lazy(() => import("../Profile/Profile"));
 const Dashboard = lazy(() => import("../Dashboard/Dashboard"));
 
-function PagesWithLazyLoadings() {
+const PagesWithLazyLoadings = () => {
     return (
         <Fragment>
             <Suspense fallback={<Spinner />}>
@@ -19,10 +19,11 @@ function PagesWithLazyLoadings() {
                     <Route path="/profile" component={Profile} exact />
                     <Route path='/sports/' component={() => <Redirect to="/sports/football"/>} exact />
                     <Route path="/sports/:type" component={Sports} exact />
+                    <Route path="/sports-score-app/" component={() => <Redirect to="/" />} exact />
                 </Switch>
             </Suspense>
         </Fragment>
     );
-}
+};
 
 export default PagesWithLazyLoadings;

@@ -12,7 +12,9 @@ function App() {
       <Navbar />
       <Switch>
         <Route
-          path={['/', '/about', '/profile', '/sports/', '/sports/:type']}
+          path={[
+            '/', '/about', '/profile', '/sports/', '/sports/:type', '/sports-score-app'
+          ]}
           component={PagesWithLazyLoadings}
           exact
         />

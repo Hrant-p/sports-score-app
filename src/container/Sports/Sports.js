@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Table from '../Table/Table';
@@ -8,13 +8,13 @@ import Error from '../Error/Error';
 import './Sports.scss';
 
 const Sports = ({ error, isLoading }) => (
-  <>
+  <Fragment>
     {error && <Error />}
     {isLoading && <Spinner />}
     <div className="sports-container">
       <Table />
     </div>
-  </>
+  </Fragment>
 );
 
 const mapStateToPops = state => ({
